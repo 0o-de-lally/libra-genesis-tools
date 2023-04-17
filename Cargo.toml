@@ -2,7 +2,8 @@
 resolver = "2"
 
 members = [
-  "vm-genesis"
+  "vm-genesis",
+  "genesis-tools"
 ]
 
 #     "api",
