@@ -1,42 +1,29 @@
 
 use crate::*;
 use aptos_crypto::{
-    bls12381,
-    ed25519::{Ed25519PrivateKey, Ed25519PublicKey},
-    HashValue, PrivateKey, Uniform,
+    ed25519::{Ed25519PublicKey},
+    HashValue,
 };
-use aptos_framework::{ReleaseBundle, ReleasePackage};
+use aptos_framework::{ReleaseBundle};
 use aptos_gas::{
-    AbstractValueSizeGasParameters, AptosGasParameters, ChangeSetConfigs, InitialGasSchedule,
-    NativeGasParameters, ToOnChainGasSchedule, LATEST_GAS_FEATURE_VERSION,
+    AbstractValueSizeGasParameters, ChangeSetConfigs,
+    NativeGasParameters, LATEST_GAS_FEATURE_VERSION,
 };
 use aptos_types::{
-    account_config::{self, aptos_test_root_address, events::NewEpochEvent, CORE_CODE_ADDRESS},
     chain_id::ChainId,
-    contract_event::ContractEvent,
     on_chain_config::{
-        FeatureFlag, Features, GasScheduleV2, OnChainConsensusConfig, TimedFeatures,
-        APTOS_MAX_KNOWN_VERSION,
+        Features, GasScheduleV2, OnChainConsensusConfig, TimedFeatures,
     },
-    transaction::{authenticator::AuthenticationKey, ChangeSet, Transaction, WriteSetPayload},
+    transaction::{ChangeSet},
 };
 use aptos_vm::{
     data_cache::AsMoveResolver,
-    move_vm_ext::{MoveVmExt, SessionExt, SessionId},
+    move_vm_ext::{MoveVmExt, SessionId},
 };
-use move_core_types::{
-    account_address::AccountAddress,
-    identifier::Identifier,
-    language_storage::{ModuleId, TypeTag},
-    resolver::MoveResolver,
-    value::{serialize_values, MoveValue},
-};
-use move_vm_types::gas::UnmeteredGasMeter;
-use once_cell::sync::Lazy;
-use rand::prelude::*;
-use serde::{Deserialize, Serialize};
 
-pub fn encode_genesis_change_set(
+
+/// Generates a genesis using the recovery file for hard forks.
+pub fn encode_libra_recovery_genesis_change_set(
     core_resources_key: &Ed25519PublicKey,
     validators: &[Validator],
     framework: &ReleaseBundle,
