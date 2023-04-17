@@ -15,3 +15,10 @@ rust-version = { workspace = true }
 
 [dependencies]
 clap = { version = "4.2.2", features = ["derive", "env", "suggestions"] }
+anyhow = { workspace = true }
+
+# TODO: Gokhan, need help here:
+# want to import the recovery json parsing tool from here.
+# https://github.com/0o-de-lally/libra/blob/dc5f26debb76c75f83359ba80c2bdd010d13c719/ol/types/src/legacy_recovery.rs#L313
+
+# ol-genesis-tools = { git = "https://github.com/0o-de-lally/libra.git"}
