@@ -27,4 +27,4 @@ aptos-gas = { workspace = true }
 aptos-vm = { workspace = true }
 aptos-framework = { workspace = true }
 aptos-crypto = { workspace = true }
-# serde-reflection = "0.3.6"
+aptos-cached-packages = { workspace = true }

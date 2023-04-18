@@ -502,7 +502,7 @@ pub fn initialize_on_chain_governance( //////// 0L ////////
     );
 }
 
-fn create_accounts(session: &mut SessionExt<impl MoveResolver>, accounts: &[AccountBalance]) {
+pub fn create_accounts(session: &mut SessionExt<impl MoveResolver>, accounts: &[AccountBalance]) { //////// 0L ////////
     let accounts_bytes = bcs::to_bytes(accounts).expect("AccountMaps can be serialized");
     let mut serialized_values = serialize_values(&vec![MoveValue::Signer(CORE_CODE_ADDRESS)]);
     serialized_values.push(accounts_bytes);
@@ -515,7 +515,7 @@ fn create_accounts(session: &mut SessionExt<impl MoveResolver>, accounts: &[Acco
     );
 }
 
-fn create_employee_validators(
+pub fn create_employee_validators( //////// 0L ////////
     session: &mut SessionExt<impl MoveResolver>,
     employees: &[EmployeePool],
     genesis_config: &GenesisConfiguration,
@@ -555,10 +555,10 @@ pub fn create_and_initialize_validators( //////// 0L ////////
     );
 }
 
-fn create_and_initialize_validators_with_commission(
+pub fn create_and_initialize_validators_with_commission( //////// 0L ////////
     session: &mut SessionExt<impl MoveResolver>,
     validators: &[ValidatorWithCommissionRate],
-) {
+) { //////// 0L ////////
     let validators_bytes = bcs::to_bytes(validators).expect("Validators can be serialized");
     let mut serialized_values = serialize_values(&vec![
         MoveValue::Signer(CORE_CODE_ADDRESS),

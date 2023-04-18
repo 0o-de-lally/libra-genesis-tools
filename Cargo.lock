@@ -2230,6 +2230,7 @@ name = "genesis-tools"
 version = "0.1.0"
 dependencies = [
  "anyhow",
+ "aptos-cached-packages",
  "aptos-crypto",
  "aptos-framework",
  "aptos-gas",
