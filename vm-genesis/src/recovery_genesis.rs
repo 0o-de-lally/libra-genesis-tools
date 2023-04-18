@@ -21,6 +21,26 @@ use aptos_vm::{
     move_vm_ext::{MoveVmExt, SessionId},
 };
 
+pub fn libra_mainnet_genesis(
+    framework: &ReleaseBundle,
+    validators: Vec<Validator>,
+) -> (ChangeSet, Vec<Validator>) {
+    // TODO: Update to have custom validators/accounts with initial balances at genesis.
+    // let test_validators = TestValidator::new_test_set(count, Some(1_000_000_000_000_000));
+    // let validators_: Vec<Validator> = test_validators.iter().map(|t| t.data.clone()).collect();
+    // let validators = &validators_;
+
+    let genesis = encode_libra_recovery_genesis_change_set(
+        &GENESIS_KEYPAIR.1,
+        &validators,
+        framework,
+        ChainId::test(),
+        &mainnet_genesis_config(),
+        &OnChainConsensusConfig::default(),
+        &default_gas_schedule(),
+    );
+    (genesis, validators)
+}
 
 /// Generates a genesis using the recovery file for hard forks.
 pub fn encode_libra_recovery_genesis_change_set(

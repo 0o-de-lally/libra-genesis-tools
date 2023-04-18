@@ -1,4 +1,3 @@
-// mod from_json;
 use clap::{Parser, Subcommand};
 
 #[derive(Parser)]
@@ -24,6 +23,8 @@ fn main() {
     match cli.command {
         Some(Sub::Fork { test_mode }) => {
           dbg!(&test_mode);
+          // make_recovery_genesis_from_vec_legacy_recovery();
+
         },
         _ => {},
     }

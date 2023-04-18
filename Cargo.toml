@@ -538,8 +538,11 @@ serde_bytes = "0.11.6"
 serde_json = { version = "1.0.81", features = ["preserve_order"] }
 serde_repr = "0.1"
 serde-name = "0.1.1"
-serde-generate = { git = "https://github.com/aptos-labs/serde-reflection", rev = "839aed62a20ddccf043c08961cfe74875741ccba" }
-serde-reflection = { git = "https://github.com/aptos-labs/serde-reflection", rev = "839aed62a20ddccf043c08961cfe74875741ccba" }
+# serde-generate = { git = "https://github.com/aptos-labs/serde-reflection", rev = "839aed62a20ddccf043c08961cfe74875741ccba" }
+serde-generate = "0.25.1"
+# serde-reflection = { git = "https://github.com/aptos-labs/serde-reflection", rev = "839aed62a20ddccf043c08961cfe74875741ccba" }
+serde-reflection = "0.3.6"
+
 serde_yaml = "0.8.24"
 shadow-rs = "0.16.2"
 smallvec = "1.8.0"
@@ -620,6 +623,9 @@ move-core-types = { git = "https://github.com/aptos-labs/aptos-core.git" }
 move-vm-types = { git = "https://github.com/aptos-labs/aptos-core.git" }
 # read-write-set = { git = "https://github.com/aptos-labs/aptos-core/third_party/move/tools/read-write-set" }
 # read-write-set-dynamic = { git = "https://github.com/aptos-labs/aptos-core/third_party/move/tools/read-write-set/dynamic" }
+
+######## libra ########
+libra-vm-genesis = { path = "vm-genesis" }
 
 [profile.release]
 debug = true

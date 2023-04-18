@@ -1,0 +1,59 @@
+use anyhow::Error;
+use std::path::PathBuf;
+use ol_types::legacy_recovery::{self, LegacyRecovery};
+// use diem_types::account_address::AccountAddress as LegacyAddress;
+use move_core_types::{
+    account_address::AccountAddress
+};
+use aptos_types::transaction::{WriteSetPayload, Transaction};
+use libra_vm_genesis::encode_genesis_change_set;
+/// Make a recovery genesis blob
+pub fn make_recovery_genesis_from_vec_legacy_recovery(
+    recovery: &[LegacyRecovery],
+    genesis_vals: Vec<AccountAddress>,
+    _genesis_blob_path: PathBuf,
+    append_user_accounts: bool,
+) -> Result<Transaction, Error> {
+    // get consensus accounts
+    let all_validator_configs = legacy_recovery::recover_validator_configs(recovery)?;
+
+    // check the validators that are joining genesis actually have legacy data
+    let count = all_validator_configs.vals
+    .iter()
+    .filter(
+      |v| {
+        dbg!(&v.val_account);
+        let string_addr = v.val_account.to_string();
+        let addr = AccountAddress::from_hex_literal(&string_addr).unwrap();
+        genesis_vals.contains(&addr)
+        // true
+      }
+    )
+    .count();
+
+    if count == 0 {
+      anyhow::bail!("no val configs found for genesis set");
+    }
+
+    let recovery_changeset = encode_genesis_change_set(
+      &all_validator_configs.vals,
+      &all_validator_configs.opers,
+      &genesis_vals,
+      1, // mainnet
+      append_user_accounts,
+      recovery, // TODO: turn this into an option type
+    )?;
+
+    // For a real upgrade or fork, we want to include all user accounts.
+    // this is the default.
+    // Otherwise, we might need to just collect the validator accounts
+    // for debugging or other test purposes.
+    // let expected_len_all_users = recovery.len() as u64;
+    
+    let gen_tx = Transaction::GenesisTransaction(WriteSetPayload::Direct(recovery_changeset));
+
+    // save genesis
+    // save_genesis(&gen_tx, genesis_blob_path)?;
+    todo!()
+    // Ok(gen_tx)
+}
