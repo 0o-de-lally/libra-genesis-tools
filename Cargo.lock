@@ -2230,7 +2230,12 @@ name = "genesis-tools"
 version = "0.1.0"
 dependencies = [
  "anyhow",
+ "aptos-crypto",
+ "aptos-framework",
+ "aptos-gas",
  "aptos-types",
+ "aptos-vm",
+ "bcs 0.1.4",
  "clap 4.2.2",
  "libra-vm-genesis",
  "move-core-types 0.0.4",

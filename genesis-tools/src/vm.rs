@@ -1,9 +1,9 @@
 
-use crate::{
+use libra_vm_genesis::{
   Validator,
   verify_genesis_write_set,
   publish_framework,
-  GenesisStateView,
+  genesis_context::GenesisStateView,
   emit_new_block_and_epoch_event,
   set_genesis_end,
   allow_core_resources_to_set_version,

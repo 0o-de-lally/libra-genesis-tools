@@ -1,3 +1,7 @@
+//! create a genesis from a LegacyRecovery struct
+
+use std::fs::File;
+use std::io::Write;
 use anyhow::Error;
 use std::path::PathBuf;
 use ol_types::legacy_recovery::{self, LegacyRecovery};
@@ -6,12 +10,13 @@ use move_core_types::{
     account_address::AccountAddress
 };
 use aptos_types::transaction::{WriteSetPayload, Transaction};
-use libra_vm_genesis::encode_genesis_change_set;
+use libra_vm_genesis::{Validator};
+use crate::vm::libra_mainnet_genesis;
 /// Make a recovery genesis blob
 pub fn make_recovery_genesis_from_vec_legacy_recovery(
     recovery: &[LegacyRecovery],
     genesis_vals: Vec<Validator>,
-    _genesis_blob_path: PathBuf,
+    genesis_blob_path: PathBuf,
     append_user_accounts: bool,
 ) -> Result<Transaction, Error> {
     // get consensus accounts
@@ -23,10 +28,10 @@ pub fn make_recovery_genesis_from_vec_legacy_recovery(
     .filter(
       |v| {
         dbg!(&v.val_account);
-        let string_addr = v.val_account.to_string();
-        let addr = AccountAddress::from_hex_literal(&string_addr).unwrap();
-        genesis_vals.contains(&addr)
-        // true
+        // let string_addr = v.val_account.to_string();
+        // let addr = AccountAddress::from_hex_literal(&string_addr).unwrap();
+        // genesis_vals.contains(&addr)
+        true
       }
     )
     .count();
@@ -35,7 +40,7 @@ pub fn make_recovery_genesis_from_vec_legacy_recovery(
       anyhow::bail!("no val configs found for genesis set");
     }
 
-    let recovery_changeset = libra_mainnet_genesis(
+    let (recovery_changeset, _) = libra_mainnet_genesis(
       genesis_vals
     )?;
 
@@ -48,7 +53,17 @@ pub fn make_recovery_genesis_from_vec_legacy_recovery(
     let gen_tx = Transaction::GenesisTransaction(WriteSetPayload::Direct(recovery_changeset));
 
     // save genesis
-    // save_genesis(&gen_tx, genesis_blob_path)?;
+    save_genesis(&gen_tx, genesis_blob_path)?;
     todo!()
     // Ok(gen_tx)
+}
+
+
+/// save the genesis blob
+pub fn save_genesis(gen_tx: &Transaction, output_path: PathBuf) -> Result<(), Error> {
+    // let file_path = output_path.join("genesis").with_extension("blob");
+    let mut file = File::create(output_path)?;
+    let bytes = bcs::to_bytes(&gen_tx)?;
+    file.write_all(&bytes)?;
+    Ok(())
 }

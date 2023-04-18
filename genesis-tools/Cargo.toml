@@ -22,5 +22,9 @@ ol-types = { git = "https://github.com/simsekgokhan/libra.git", branch = "v6-dwh
 move-core-types = { workspace = true }
 aptos-types = { workspace = true }
 libra-vm-genesis = { workspace = true }
-
+bcs = { workspace = true }
+aptos-gas = { workspace = true }
+aptos-vm = { workspace = true }
+aptos-framework = { workspace = true }
+aptos-crypto = { workspace = true }
 # serde-reflection = "0.3.6"
