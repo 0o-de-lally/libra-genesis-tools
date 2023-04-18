@@ -18,7 +18,7 @@ clap = { version = "4.2.2", features = ["derive", "env", "suggestions"] }
 anyhow = { workspace = true }
 # ol-genesis-tools = { git = "https://github.com/simsekgokhan/libra.git", branch = "v6-dwh-err"}
 ol-types = { git = "https://github.com/simsekgokhan/libra.git", branch = "v6-dwh-err"}
-# diem-types = { git = "https://github.com/simsekgokhan/libra.git", branch = "v6-dwh-err"}
+diem-types = { git = "https://github.com/simsekgokhan/libra.git", branch = "v6-dwh-err"}
 move-core-types = { workspace = true }
 aptos-types = { workspace = true }
 libra-vm-genesis = { workspace = true }

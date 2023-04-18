@@ -5,10 +5,6 @@ use std::io::Write;
 use anyhow::Error;
 use std::path::PathBuf;
 use ol_types::legacy_recovery::{self, LegacyRecovery};
-// use diem_types::account_address::AccountAddress as LegacyAddress;
-use move_core_types::{
-    account_address::AccountAddress
-};
 use aptos_types::transaction::{WriteSetPayload, Transaction};
 use libra_vm_genesis::{Validator};
 use crate::vm::libra_mainnet_genesis;
@@ -17,31 +13,32 @@ pub fn make_recovery_genesis_from_vec_legacy_recovery(
     recovery: &[LegacyRecovery],
     genesis_vals: Vec<Validator>,
     genesis_blob_path: PathBuf,
-    append_user_accounts: bool,
+    // append_user_accounts: bool,
 ) -> Result<Transaction, Error> {
-    // get consensus accounts
-    let all_validator_configs = legacy_recovery::recover_validator_configs(recovery)?;
+    // // get consensus accounts
+    // let all_validator_configs = legacy_recovery::recover_validator_configs(recovery)?;
 
-    // check the validators that are joining genesis actually have legacy data
-    let count = all_validator_configs.vals
-    .iter()
-    .filter(
-      |v| {
-        dbg!(&v.val_account);
-        // let string_addr = v.val_account.to_string();
-        // let addr = AccountAddress::from_hex_literal(&string_addr).unwrap();
-        // genesis_vals.contains(&addr)
-        true
-      }
-    )
-    .count();
+    // // check the validators that are joining genesis actually have legacy data
+    // let count = all_validator_configs.vals
+    // .iter()
+    // .filter(
+    //   |v| {
+    //     dbg!(&v.val_account);
+    //     // let string_addr = v.val_account.to_string();
+    //     // let addr = AccountAddress::from_hex_literal(&string_addr).unwrap();
+    //     // genesis_vals.contains(&addr)
+    //     true
+    //   }
+    // )
+    // .count();
 
-    if count == 0 {
-      anyhow::bail!("no val configs found for genesis set");
-    }
+    // if count == 0 {
+    //   anyhow::bail!("no val configs found for genesis set");
+    // }
 
     let (recovery_changeset, _) = libra_mainnet_genesis(
-      genesis_vals
+      genesis_vals,
+      Some(recovery),
     )?;
 
     // For a real upgrade or fork, we want to include all user accounts.

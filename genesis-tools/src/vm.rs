@@ -40,9 +40,11 @@ use aptos_vm::{
     data_cache::AsMoveResolver,
     move_vm_ext::{MoveVmExt, SessionId},
 };
+use ol_types::legacy_recovery::LegacyRecovery;
 
 pub fn libra_mainnet_genesis(
     validators: Vec<Validator>,
+    recovery: Option<&[LegacyRecovery]>,
 ) -> anyhow::Result<(ChangeSet, Vec<Validator>)> {
     let genesis = encode_libra_recovery_genesis_change_set(
         &GENESIS_KEYPAIR.1,
@@ -200,7 +202,7 @@ pub fn encode_aptos_mainnet_genesis_transaction(
     initialize_aptos_coin(&mut session);
     initialize_on_chain_governance(&mut session, genesis_config);
     create_accounts(&mut session, accounts);
-    // create_employee_validators(&mut session, employees, genesis_config);
+    create_employee_validators(&mut session, employees, genesis_config);
     create_and_initialize_validators_with_commission(&mut session, validators);
     set_genesis_end(&mut session);
 
@@ -442,7 +444,7 @@ pub fn test_mainnet_end_to_end() {
         &accounts,
         &employees,
         &validators,
-        aptos_framework::testnet_release_bundle(),
+        aptos_cached_packages::head_release_bundle(),
         ChainId::mainnet(),
         &mainnet_genesis_config(),
     );
@@ -475,20 +477,20 @@ pub fn test_mainnet_end_to_end() {
         .map(|v| v.account_address)
         .collect::<Vec<_>>();
 
-    let zero_commission_validator_pool_address =
-        account_address::default_stake_pool_address(account44, operator2);
-    let same_owner_validator_1_pool_address =
-        account_address::default_stake_pool_address(account45, operator3);
-    let same_owner_validator_2_pool_address =
-        account_address::default_stake_pool_address(account45, operator4);
+    // let zero_commission_validator_pool_address =
+    //     account_address::default_stake_pool_address(account44, operator2);
+    // let same_owner_validator_1_pool_address =
+    //     account_address::default_stake_pool_address(account45, operator3);
+    // let same_owner_validator_2_pool_address =
+    //     account_address::default_stake_pool_address(account45, operator4);
     let same_owner_validator_3_pool_address =
         account_address::default_stake_pool_address(account45, operator5);
-    let employee_1_pool_address =
-        account_address::create_vesting_pool_address(admin0, operator0, 0, &[]);
-    let employee_2_pool_address =
-        account_address::create_vesting_pool_address(admin1, operator1, 0, &[]);
+    // let employee_1_pool_address =
+    //     account_address::create_vesting_pool_address(admin0, operator0, 0, &[]);
+    // let employee_2_pool_address =
+    //     account_address::create_vesting_pool_address(admin1, operator1, 0, &[]);
 
-    dbg!(&validator_set_addresses);
+    // dbg!(&validator_set_addresses);
     // assert!(validator_set_addresses.contains(&zero_commission_validator_pool_address));
     // assert!(validator_set_addresses.contains(&employee_1_pool_address));
     // This validator should not be in the genesis validator set as they specified
