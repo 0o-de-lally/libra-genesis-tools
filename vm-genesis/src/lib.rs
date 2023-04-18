@@ -6,7 +6,7 @@
 #![forbid(unsafe_code)]
 
 mod genesis_context;
-mod recovery_genesis;
+pub mod recovery_genesis;
 
 use crate::genesis_context::GenesisStateView;
 use aptos_crypto::{

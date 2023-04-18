@@ -10,7 +10,7 @@ use libra_vm_genesis::encode_genesis_change_set;
 /// Make a recovery genesis blob
 pub fn make_recovery_genesis_from_vec_legacy_recovery(
     recovery: &[LegacyRecovery],
-    genesis_vals: Vec<AccountAddress>,
+    genesis_vals: Vec<Validator>,
     _genesis_blob_path: PathBuf,
     append_user_accounts: bool,
 ) -> Result<Transaction, Error> {
@@ -35,13 +35,8 @@ pub fn make_recovery_genesis_from_vec_legacy_recovery(
       anyhow::bail!("no val configs found for genesis set");
     }
 
-    let recovery_changeset = encode_genesis_change_set(
-      &all_validator_configs.vals,
-      &all_validator_configs.opers,
-      &genesis_vals,
-      1, // mainnet
-      append_user_accounts,
-      recovery, // TODO: turn this into an option type
+    let recovery_changeset = libra_mainnet_genesis(
+      genesis_vals
     )?;
 
     // For a real upgrade or fork, we want to include all user accounts.

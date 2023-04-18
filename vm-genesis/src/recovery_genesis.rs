@@ -1,10 +1,30 @@
 
-use crate::*;
+use crate::{
+  Validator,
+  verify_genesis_write_set,
+  publish_framework,
+  GenesisStateView,
+  emit_new_block_and_epoch_event,
+  set_genesis_end,
+  allow_core_resources_to_set_version,
+  create_and_initialize_validators,
+  initialize_on_chain_governance,
+  initialize_aptos_coin,
+  initialize_core_resources_and_aptos_coin,
+  initialize_features,
+  initialize,
+  validate_genesis_config,
+  GenesisConfiguration,
+  default_gas_schedule,
+  mainnet_genesis_config,
+  GENESIS_KEYPAIR,
+
+};
 use aptos_crypto::{
     ed25519::{Ed25519PublicKey},
     HashValue,
 };
-use aptos_framework::{ReleaseBundle};
+use aptos_framework::{self, ReleaseBundle};
 use aptos_gas::{
     AbstractValueSizeGasParameters, ChangeSetConfigs,
     NativeGasParameters, LATEST_GAS_FEATURE_VERSION,
@@ -22,24 +42,18 @@ use aptos_vm::{
 };
 
 pub fn libra_mainnet_genesis(
-    framework: &ReleaseBundle,
     validators: Vec<Validator>,
-) -> (ChangeSet, Vec<Validator>) {
-    // TODO: Update to have custom validators/accounts with initial balances at genesis.
-    // let test_validators = TestValidator::new_test_set(count, Some(1_000_000_000_000_000));
-    // let validators_: Vec<Validator> = test_validators.iter().map(|t| t.data.clone()).collect();
-    // let validators = &validators_;
-
+) -> anyhow::Result<(ChangeSet, Vec<Validator>)> {
     let genesis = encode_libra_recovery_genesis_change_set(
         &GENESIS_KEYPAIR.1,
         &validators,
-        framework,
+        aptos_framework::testnet_release_bundle(),
         ChainId::test(),
         &mainnet_genesis_config(),
         &OnChainConsensusConfig::default(),
         &default_gas_schedule(),
     );
-    (genesis, validators)
+    Ok((genesis, validators))
 }
 
 /// Generates a genesis using the recovery file for hard forks.
