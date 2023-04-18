@@ -11,8 +11,8 @@ use crate::vm::libra_mainnet_genesis;
 /// Make a recovery genesis blob
 pub fn make_recovery_genesis_from_vec_legacy_recovery(
     recovery: &[LegacyRecovery],
-    genesis_vals: Vec<Validator>,
-    genesis_blob_path: PathBuf,
+    genesis_vals: &[Validator],
+    genesis_blob_path: &PathBuf,
     // append_user_accounts: bool,
 ) -> Result<Transaction, Error> {
     // // get consensus accounts
@@ -36,7 +36,7 @@ pub fn make_recovery_genesis_from_vec_legacy_recovery(
     //   anyhow::bail!("no val configs found for genesis set");
     // }
 
-    let (recovery_changeset, _) = libra_mainnet_genesis(
+    let recovery_changeset = libra_mainnet_genesis(
       genesis_vals,
       Some(recovery),
     )?;
@@ -51,13 +51,13 @@ pub fn make_recovery_genesis_from_vec_legacy_recovery(
 
     // save genesis
     save_genesis(&gen_tx, genesis_blob_path)?;
-    todo!()
-    // Ok(gen_tx)
+    // todo!()
+    Ok(gen_tx)
 }
 
 
 /// save the genesis blob
-pub fn save_genesis(gen_tx: &Transaction, output_path: PathBuf) -> Result<(), Error> {
+pub fn save_genesis(gen_tx: &Transaction, output_path: &PathBuf) -> Result<(), Error> {
     // let file_path = output_path.join("genesis").with_extension("blob");
     let mut file = File::create(output_path)?;
     let bytes = bcs::to_bytes(&gen_tx)?;

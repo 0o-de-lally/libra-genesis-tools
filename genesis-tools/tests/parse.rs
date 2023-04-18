@@ -1,6 +1,4 @@
-use std::{path::PathBuf, str::FromStr};
-
-use aptos_types::account_address::AccountAddress;
+use std::path::PathBuf;
 use genesis_tools::{parse_json, convert_types};
 
 #[test]
@@ -9,25 +7,18 @@ fn parse_json() {
     let p = PathBuf::from(env!("CARGO_MANIFEST_DIR"))
         .join("tests/fixtures/sample_end_user_single.json");
     
-    dbg!(&p);
+    // dbg!(&p);
     let r = parse_json::parse(p).unwrap();
-    dbg!(&r);
+    // dbg!(&r);
     if let Some(acc) = r[0].account {
-        dbg!(&acc);
-        let acc_str = acc.to_string();
-        // let new_acc = AccountAddress::from_str(&acc_str);
-        let new_acc = AccountAddress::from_hex_literal(&format!("0x{}",acc_str)).unwrap();
-        dbg!(&new_acc);
-        let a = convert_types::convert_account(acc);
-        dbg!(&a);
+        let a = convert_types::convert_account(acc).unwrap();
+        // dbg!(&a);
+        assert!(&a.to_string() == "00000000000000000000000000000000b78ba84a443873f2e324c80f3e4e2334");
     }
-    
 
-
-    // let recovery_json_path = PathBuf::from("tests/fixtures/recovery.json");
-
-    // let recovery = make_recovery_genesis_from_vec_legacy_recovery(recovery_json_path).unwrap();
-
-    // assert_eq!(recovery.len(), 1);
-
+    if let Some(acc) = r[0].auth_key {
+        let a = convert_types::convert_auth_key(acc).unwrap();
+        dbg!(&hex::encode(&a));
+        assert!(&hex::encode(&a) == "c99e93112458b404daaed49c019c6de5b78ba84a443873f2e324c80f3e4e2334");
+    }
 }

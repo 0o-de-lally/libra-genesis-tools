@@ -28,3 +28,4 @@ aptos-vm = { workspace = true }
 aptos-framework = { workspace = true }
 aptos-crypto = { workspace = true }
 aptos-cached-packages = { workspace = true }
+hex = { workspace = true }

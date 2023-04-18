@@ -42,32 +42,47 @@ use aptos_vm::{
 };
 use ol_types::legacy_recovery::LegacyRecovery;
 
+use crate::convert_types;
+
 pub fn libra_mainnet_genesis(
-    validators: Vec<Validator>,
+    validators: &[Validator],
     recovery: Option<&[LegacyRecovery]>,
-) -> anyhow::Result<(ChangeSet, Vec<Validator>)> {
+) -> anyhow::Result<ChangeSet> {
     let genesis = encode_libra_recovery_genesis_change_set(
         &GENESIS_KEYPAIR.1,
-        &validators,
+        validators,
+        recovery,
         aptos_framework::testnet_release_bundle(),
         ChainId::test(),
         &mainnet_genesis_config(),
         &OnChainConsensusConfig::default(),
         &default_gas_schedule(),
     );
-    Ok((genesis, validators))
+
+    Ok(genesis)
 }
 
 /// Generates a genesis using the recovery file for hard forks.
 pub fn encode_libra_recovery_genesis_change_set(
     core_resources_key: &Ed25519PublicKey,
     validators: &[Validator],
+    recovery: Option<&[LegacyRecovery]>,
     framework: &ReleaseBundle,
     chain_id: ChainId,
     genesis_config: &GenesisConfiguration,
     consensus_config: &OnChainConsensusConfig,
     gas_schedule: &GasScheduleV2,
 ) -> ChangeSet {
+    if let Some(r) = recovery {
+      r.into_iter()
+      .for_each(|a| {
+        // dbg!(a.account);
+        if let Some(acc) = a.account {
+            dbg!(convert_types::convert_account(acc));
+        }
+      })
+    }
+
     validate_genesis_config(genesis_config);
 
     // Create a Move VM session so we can invoke on-chain genesis intializations.

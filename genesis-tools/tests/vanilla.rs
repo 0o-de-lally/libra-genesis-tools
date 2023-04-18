@@ -10,7 +10,7 @@ fn vanilla_genesis() {
 
     let vec_vals = vec![test_validators[0].data.clone()];
     // dbg!(&vec_vals);
-    let (recovery_changeset, _) = libra_mainnet_genesis(vec_vals, None).unwrap();
+    let recovery_changeset  = libra_mainnet_genesis(&vec_vals, None).unwrap();
 
     let WriteSet::V0(writeset) = recovery_changeset.write_set();
 
