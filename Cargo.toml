@@ -346,7 +346,7 @@ aptos-proxy = { git = "https://github.com/aptos-labs/aptos-core.git" }
 # aptos-safety-rules = { git = "https://github.com/aptos-labs/aptos-core/consensus/safety-rules" }
 # aptos-schemadb = { git = "https://github.com/aptos-labs/aptos-core/storage/schemadb" }
 # aptos-scratchpad = { git = "https://github.com/aptos-labs/aptos-core/storage/scratchpad" }
-# aptos-sdk = { git = "https://github.com/aptos-labs/aptos-core/sdk" }
+aptos-sdk = { git = "https://github.com/aptos-labs/aptos-core.git" }
 # aptos-sdk-builder = { git = "https://github.com/aptos-labs/aptos-core/aptos-move/aptos-sdk-builder" }
 # aptos-secure-net = { git = "https://github.com/aptos-labs/aptos-core/secure/net" }
 aptos-secure-storage = { git = "https://github.com/aptos-labs/aptos-core.git" }

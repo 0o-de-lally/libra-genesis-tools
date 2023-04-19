@@ -47,3 +47,6 @@ console = "0.15.5"
 indicatif = "0.17.3"
 
 
+[dev-dependencies]
+aptos-sdk = { workspace = true }
+
