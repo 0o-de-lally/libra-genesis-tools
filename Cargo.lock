@@ -234,7 +234,7 @@ checksum = "7de8ce5e0f9f8d88245311066a578d72b7af3e7088f32783804676302df237e4"
 [[package]]
 name = "aptos-accumulator"
 version = "0.1.0"
-source = "git+https://github.com/aptos-labs/aptos-core.git#d5c6a8139d96fb16c3fc8bc8d09aaeb28498c57c"
+source = "git+https://github.com/0o-de-lally/zapatos.git?branch=vendor#d1716346b14792ae1800530840fefb4955cfddf4"
 dependencies = [
  "anyhow",
  "aptos-crypto",
@@ -244,7 +244,7 @@ dependencies = [
 [[package]]
 name = "aptos-aggregator"
 version = "0.1.0"
-source = "git+https://github.com/aptos-labs/aptos-core.git#d5c6a8139d96fb16c3fc8bc8d09aaeb28498c57c"
+source = "git+https://github.com/0o-de-lally/zapatos.git?branch=vendor#d1716346b14792ae1800530840fefb4955cfddf4"
 dependencies = [
  "anyhow",
  "aptos-crypto",
@@ -252,7 +252,7 @@ dependencies = [
  "aptos-types",
  "bcs 0.1.4",
  "better_any",
- "move-binary-format 0.0.3 (git+https://github.com/aptos-labs/aptos-core.git)",
+ "move-binary-format 0.0.3 (git+https://github.com/0o-de-lally/zapatos.git?branch=vendor)",
  "move-core-types 0.0.4",
  "move-table-extension",
  "once_cell",
@@ -262,7 +262,7 @@ dependencies = [
 [[package]]
 name = "aptos-api-types"
 version = "0.0.1"
-source = "git+https://github.com/aptos-labs/aptos-core.git#d5c6a8139d96fb16c3fc8bc8d09aaeb28498c57c"
+source = "git+https://github.com/0o-de-lally/zapatos.git?branch=vendor#d1716346b14792ae1800530840fefb4955cfddf4"
 dependencies = [
  "anyhow",
  "aptos-config",
@@ -277,7 +277,7 @@ dependencies = [
  "bcs 0.1.4",
  "hex",
  "indoc",
- "move-binary-format 0.0.3 (git+https://github.com/aptos-labs/aptos-core.git)",
+ "move-binary-format 0.0.3 (git+https://github.com/0o-de-lally/zapatos.git?branch=vendor)",
  "move-core-types 0.0.4",
  "move-resource-viewer",
  "poem",
@@ -289,7 +289,7 @@ dependencies = [
 [[package]]
 name = "aptos-bitvec"
 version = "0.1.0"
-source = "git+https://github.com/aptos-labs/aptos-core.git#d5c6a8139d96fb16c3fc8bc8d09aaeb28498c57c"
+source = "git+https://github.com/0o-de-lally/zapatos.git?branch=vendor#d1716346b14792ae1800530840fefb4955cfddf4"
 dependencies = [
  "serde 1.0.160",
  "serde_bytes",
@@ -298,7 +298,7 @@ dependencies = [
 [[package]]
 name = "aptos-block-executor"
 version = "0.1.0"
-source = "git+https://github.com/aptos-labs/aptos-core.git#d5c6a8139d96fb16c3fc8bc8d09aaeb28498c57c"
+source = "git+https://github.com/0o-de-lally/zapatos.git?branch=vendor#d1716346b14792ae1800530840fefb4955cfddf4"
 dependencies = [
  "anyhow",
  "aptos-aggregator",
@@ -314,7 +314,7 @@ dependencies = [
  "crossbeam",
  "crossbeam-queue",
  "dashmap",
- "move-binary-format 0.0.3 (git+https://github.com/aptos-labs/aptos-core.git)",
+ "move-binary-format 0.0.3 (git+https://github.com/0o-de-lally/zapatos.git?branch=vendor)",
  "num_cpus",
  "once_cell",
  "parking_lot 0.12.1",
@@ -324,7 +324,7 @@ dependencies = [
 [[package]]
 name = "aptos-cached-packages"
 version = "0.1.0"
-source = "git+https://github.com/aptos-labs/aptos-core.git#d5c6a8139d96fb16c3fc8bc8d09aaeb28498c57c"
+source = "git+https://github.com/0o-de-lally/zapatos.git?branch=vendor#d1716346b14792ae1800530840fefb4955cfddf4"
 dependencies = [
  "aptos-framework",
  "aptos-types",
@@ -337,7 +337,7 @@ dependencies = [
 [[package]]
 name = "aptos-config"
 version = "0.1.0"
-source = "git+https://github.com/aptos-labs/aptos-core.git#d5c6a8139d96fb16c3fc8bc8d09aaeb28498c57c"
+source = "git+https://github.com/0o-de-lally/zapatos.git?branch=vendor#d1716346b14792ae1800530840fefb4955cfddf4"
 dependencies = [
  "anyhow",
  "aptos-crypto",
@@ -350,7 +350,6 @@ dependencies = [
  "aptos-types",
  "bcs 0.1.4",
  "byteorder",
- "cfg-if 1.0.0",
  "get_if_addrs",
  "mirai-annotations",
  "poem-openapi",
@@ -364,7 +363,7 @@ dependencies = [
 [[package]]
 name = "aptos-consensus-types"
 version = "0.1.0"
-source = "git+https://github.com/aptos-labs/aptos-core.git#d5c6a8139d96fb16c3fc8bc8d09aaeb28498c57c"
+source = "git+https://github.com/0o-de-lally/zapatos.git?branch=vendor#d1716346b14792ae1800530840fefb4955cfddf4"
 dependencies = [
  "anyhow",
  "aptos-bitvec",
@@ -387,7 +386,7 @@ dependencies = [
 [[package]]
 name = "aptos-crypto"
 version = "0.0.3"
-source = "git+https://github.com/aptos-labs/aptos-core.git#d5c6a8139d96fb16c3fc8bc8d09aaeb28498c57c"
+source = "git+https://github.com/0o-de-lally/zapatos.git?branch=vendor#d1716346b14792ae1800530840fefb4955cfddf4"
 dependencies = [
  "anyhow",
  "aptos-crypto-derive",
@@ -424,7 +423,7 @@ dependencies = [
 [[package]]
 name = "aptos-crypto-derive"
 version = "0.0.3"
-source = "git+https://github.com/aptos-labs/aptos-core.git#d5c6a8139d96fb16c3fc8bc8d09aaeb28498c57c"
+source = "git+https://github.com/0o-de-lally/zapatos.git?branch=vendor#d1716346b14792ae1800530840fefb4955cfddf4"
 dependencies = [
  "proc-macro2 1.0.56",
  "quote 1.0.26",
@@ -434,7 +433,7 @@ dependencies = [
 [[package]]
 name = "aptos-db"
 version = "0.1.0"
-source = "git+https://github.com/aptos-labs/aptos-core.git#d5c6a8139d96fb16c3fc8bc8d09aaeb28498c57c"
+source = "git+https://github.com/0o-de-lally/zapatos.git?branch=vendor#d1716346b14792ae1800530840fefb4955cfddf4"
 dependencies = [
  "anyhow",
  "aptos-accumulator",
@@ -476,7 +475,7 @@ dependencies = [
 [[package]]
 name = "aptos-db-indexer"
 version = "0.1.0"
-source = "git+https://github.com/aptos-labs/aptos-core.git#d5c6a8139d96fb16c3fc8bc8d09aaeb28498c57c"
+source = "git+https://github.com/0o-de-lally/zapatos.git?branch=vendor#d1716346b14792ae1800530840fefb4955cfddf4"
 dependencies = [
  "anyhow",
  "aptos-config",
@@ -502,7 +501,7 @@ dependencies = [
 [[package]]
 name = "aptos-executor"
 version = "0.1.0"
-source = "git+https://github.com/aptos-labs/aptos-core.git#d5c6a8139d96fb16c3fc8bc8d09aaeb28498c57c"
+source = "git+https://github.com/0o-de-lally/zapatos.git?branch=vendor#d1716346b14792ae1800530840fefb4955cfddf4"
 dependencies = [
  "anyhow",
  "aptos-consensus-types",
@@ -530,7 +529,7 @@ dependencies = [
 [[package]]
 name = "aptos-executor-types"
 version = "0.1.0"
-source = "git+https://github.com/aptos-labs/aptos-core.git#d5c6a8139d96fb16c3fc8bc8d09aaeb28498c57c"
+source = "git+https://github.com/0o-de-lally/zapatos.git?branch=vendor#d1716346b14792ae1800530840fefb4955cfddf4"
 dependencies = [
  "anyhow",
  "aptos-crypto",
@@ -550,7 +549,7 @@ dependencies = [
 [[package]]
 name = "aptos-framework"
 version = "0.1.0"
-source = "git+https://github.com/aptos-labs/aptos-core.git#d5c6a8139d96fb16c3fc8bc8d09aaeb28498c57c"
+source = "git+https://github.com/0o-de-lally/zapatos.git?branch=vendor#d1716346b14792ae1800530840fefb4955cfddf4"
 dependencies = [
  "anyhow",
  "aptos-aggregator",
@@ -579,7 +578,7 @@ dependencies = [
  "itertools",
  "libsecp256k1",
  "log",
- "move-binary-format 0.0.3 (git+https://github.com/aptos-labs/aptos-core.git)",
+ "move-binary-format 0.0.3 (git+https://github.com/0o-de-lally/zapatos.git?branch=vendor)",
  "move-command-line-common",
  "move-compiler",
  "move-core-types 0.0.4",
@@ -615,7 +614,7 @@ dependencies = [
 [[package]]
 name = "aptos-gas"
 version = "0.1.0"
-source = "git+https://github.com/aptos-labs/aptos-core.git#d5c6a8139d96fb16c3fc8bc8d09aaeb28498c57c"
+source = "git+https://github.com/0o-de-lally/zapatos.git?branch=vendor#d1716346b14792ae1800530840fefb4955cfddf4"
 dependencies = [
  "anyhow",
  "aptos-framework",
@@ -627,7 +626,7 @@ dependencies = [
  "aptos-types",
  "bcs 0.1.4",
  "clap 3.2.23",
- "move-binary-format 0.0.3 (git+https://github.com/aptos-labs/aptos-core.git)",
+ "move-binary-format 0.0.3 (git+https://github.com/0o-de-lally/zapatos.git?branch=vendor)",
  "move-core-types 0.0.4",
  "move-model",
  "move-table-extension",
@@ -637,7 +636,7 @@ dependencies = [
 [[package]]
 name = "aptos-gas-algebra-ext"
 version = "0.0.1"
-source = "git+https://github.com/aptos-labs/aptos-core.git#d5c6a8139d96fb16c3fc8bc8d09aaeb28498c57c"
+source = "git+https://github.com/0o-de-lally/zapatos.git?branch=vendor#d1716346b14792ae1800530840fefb4955cfddf4"
 dependencies = [
  "move-core-types 0.0.4",
 ]
@@ -645,7 +644,7 @@ dependencies = [
 [[package]]
 name = "aptos-genesis"
 version = "0.1.0"
-source = "git+https://github.com/aptos-labs/aptos-core.git#d5c6a8139d96fb16c3fc8bc8d09aaeb28498c57c"
+source = "git+https://github.com/0o-de-lally/zapatos.git?branch=vendor#d1716346b14792ae1800530840fefb4955cfddf4"
 dependencies = [
  "anyhow",
  "aptos-cached-packages",
@@ -671,7 +670,7 @@ dependencies = [
 [[package]]
 name = "aptos-github-client"
 version = "0.1.0"
-source = "git+https://github.com/aptos-labs/aptos-core.git#d5c6a8139d96fb16c3fc8bc8d09aaeb28498c57c"
+source = "git+https://github.com/0o-de-lally/zapatos.git?branch=vendor#d1716346b14792ae1800530840fefb4955cfddf4"
 dependencies = [
  "aptos-proxy",
  "serde 1.0.160",
@@ -683,17 +682,17 @@ dependencies = [
 [[package]]
 name = "aptos-global-constants"
 version = "0.1.0"
-source = "git+https://github.com/aptos-labs/aptos-core.git#d5c6a8139d96fb16c3fc8bc8d09aaeb28498c57c"
+source = "git+https://github.com/0o-de-lally/zapatos.git?branch=vendor#d1716346b14792ae1800530840fefb4955cfddf4"
 
 [[package]]
 name = "aptos-infallible"
 version = "0.1.0"
-source = "git+https://github.com/aptos-labs/aptos-core.git#d5c6a8139d96fb16c3fc8bc8d09aaeb28498c57c"
+source = "git+https://github.com/0o-de-lally/zapatos.git?branch=vendor#d1716346b14792ae1800530840fefb4955cfddf4"
 
 [[package]]
 name = "aptos-jellyfish-merkle"
 version = "0.1.0"
-source = "git+https://github.com/aptos-labs/aptos-core.git#d5c6a8139d96fb16c3fc8bc8d09aaeb28498c57c"
+source = "git+https://github.com/0o-de-lally/zapatos.git?branch=vendor#d1716346b14792ae1800530840fefb4955cfddf4"
 dependencies = [
  "anyhow",
  "aptos-crypto",
@@ -717,7 +716,7 @@ dependencies = [
 [[package]]
 name = "aptos-keygen"
 version = "0.1.0"
-source = "git+https://github.com/aptos-labs/aptos-core.git#d5c6a8139d96fb16c3fc8bc8d09aaeb28498c57c"
+source = "git+https://github.com/0o-de-lally/zapatos.git?branch=vendor#d1716346b14792ae1800530840fefb4955cfddf4"
 dependencies = [
  "aptos-crypto",
  "aptos-types",
@@ -727,7 +726,7 @@ dependencies = [
 [[package]]
 name = "aptos-log-derive"
 version = "0.1.0"
-source = "git+https://github.com/aptos-labs/aptos-core.git#d5c6a8139d96fb16c3fc8bc8d09aaeb28498c57c"
+source = "git+https://github.com/0o-de-lally/zapatos.git?branch=vendor#d1716346b14792ae1800530840fefb4955cfddf4"
 dependencies = [
  "proc-macro2 1.0.56",
  "quote 1.0.26",
@@ -737,7 +736,7 @@ dependencies = [
 [[package]]
 name = "aptos-logger"
 version = "0.1.0"
-source = "git+https://github.com/aptos-labs/aptos-core.git#d5c6a8139d96fb16c3fc8bc8d09aaeb28498c57c"
+source = "git+https://github.com/0o-de-lally/zapatos.git?branch=vendor#d1716346b14792ae1800530840fefb4955cfddf4"
 dependencies = [
  "aptos-infallible",
  "aptos-log-derive",
@@ -761,7 +760,7 @@ dependencies = [
 [[package]]
 name = "aptos-metrics-core"
 version = "0.1.0"
-source = "git+https://github.com/aptos-labs/aptos-core.git#d5c6a8139d96fb16c3fc8bc8d09aaeb28498c57c"
+source = "git+https://github.com/0o-de-lally/zapatos.git?branch=vendor#d1716346b14792ae1800530840fefb4955cfddf4"
 dependencies = [
  "anyhow",
  "prometheus 0.13.3",
@@ -770,12 +769,12 @@ dependencies = [
 [[package]]
 name = "aptos-move-stdlib"
 version = "0.1.1"
-source = "git+https://github.com/aptos-labs/aptos-core.git#d5c6a8139d96fb16c3fc8bc8d09aaeb28498c57c"
+source = "git+https://github.com/0o-de-lally/zapatos.git?branch=vendor#d1716346b14792ae1800530840fefb4955cfddf4"
 dependencies = [
  "anyhow",
  "hex",
  "log",
- "move-binary-format 0.0.3 (git+https://github.com/aptos-labs/aptos-core.git)",
+ "move-binary-format 0.0.3 (git+https://github.com/0o-de-lally/zapatos.git?branch=vendor)",
  "move-command-line-common",
  "move-compiler",
  "move-core-types 0.0.4",
@@ -793,7 +792,7 @@ dependencies = [
 [[package]]
 name = "aptos-mvhashmap"
 version = "0.1.0"
-source = "git+https://github.com/aptos-labs/aptos-core.git#d5c6a8139d96fb16c3fc8bc8d09aaeb28498c57c"
+source = "git+https://github.com/0o-de-lally/zapatos.git?branch=vendor#d1716346b14792ae1800530840fefb4955cfddf4"
 dependencies = [
  "anyhow",
  "aptos-aggregator",
@@ -808,7 +807,7 @@ dependencies = [
 [[package]]
 name = "aptos-node-identity"
 version = "0.1.0"
-source = "git+https://github.com/aptos-labs/aptos-core.git#d5c6a8139d96fb16c3fc8bc8d09aaeb28498c57c"
+source = "git+https://github.com/0o-de-lally/zapatos.git?branch=vendor#d1716346b14792ae1800530840fefb4955cfddf4"
 dependencies = [
  "anyhow",
  "aptos-types",
@@ -820,7 +819,7 @@ dependencies = [
 [[package]]
 name = "aptos-openapi"
 version = "0.1.0"
-source = "git+https://github.com/aptos-labs/aptos-core.git#d5c6a8139d96fb16c3fc8bc8d09aaeb28498c57c"
+source = "git+https://github.com/0o-de-lally/zapatos.git?branch=vendor#d1716346b14792ae1800530840fefb4955cfddf4"
 dependencies = [
  "async-trait",
  "percent-encoding",
@@ -833,7 +832,7 @@ dependencies = [
 [[package]]
 name = "aptos-package-builder"
 version = "0.1.0"
-source = "git+https://github.com/aptos-labs/aptos-core.git#d5c6a8139d96fb16c3fc8bc8d09aaeb28498c57c"
+source = "git+https://github.com/0o-de-lally/zapatos.git?branch=vendor#d1716346b14792ae1800530840fefb4955cfddf4"
 dependencies = [
  "anyhow",
  "aptos-framework",
@@ -844,19 +843,9 @@ dependencies = [
 ]
 
 [[package]]
-name = "aptos-proptest-helpers"
-version = "0.1.0"
-source = "git+https://github.com/aptos-labs/aptos-core.git#d5c6a8139d96fb16c3fc8bc8d09aaeb28498c57c"
-dependencies = [
- "crossbeam",
- "proptest",
- "proptest-derive",
-]
-
-[[package]]
 name = "aptos-proxy"
 version = "0.1.0"
-source = "git+https://github.com/aptos-labs/aptos-core.git#d5c6a8139d96fb16c3fc8bc8d09aaeb28498c57c"
+source = "git+https://github.com/0o-de-lally/zapatos.git?branch=vendor#d1716346b14792ae1800530840fefb4955cfddf4"
 dependencies = [
  "ipnet",
 ]
@@ -864,7 +853,7 @@ dependencies = [
 [[package]]
 name = "aptos-rest-client"
 version = "0.0.0"
-source = "git+https://github.com/aptos-labs/aptos-core.git#d5c6a8139d96fb16c3fc8bc8d09aaeb28498c57c"
+source = "git+https://github.com/0o-de-lally/zapatos.git?branch=vendor#d1716346b14792ae1800530840fefb4955cfddf4"
 dependencies = [
  "anyhow",
  "aptos-api-types",
@@ -876,7 +865,7 @@ dependencies = [
  "bytes",
  "futures",
  "hex",
- "move-binary-format 0.0.3 (git+https://github.com/aptos-labs/aptos-core.git)",
+ "move-binary-format 0.0.3 (git+https://github.com/0o-de-lally/zapatos.git?branch=vendor)",
  "move-core-types 0.0.4",
  "poem-openapi",
  "reqwest",
@@ -890,7 +879,7 @@ dependencies = [
 [[package]]
 name = "aptos-rocksdb-options"
 version = "0.1.0"
-source = "git+https://github.com/aptos-labs/aptos-core.git#d5c6a8139d96fb16c3fc8bc8d09aaeb28498c57c"
+source = "git+https://github.com/0o-de-lally/zapatos.git?branch=vendor#d1716346b14792ae1800530840fefb4955cfddf4"
 dependencies = [
  "aptos-config",
  "rocksdb",
@@ -899,7 +888,7 @@ dependencies = [
 [[package]]
 name = "aptos-schemadb"
 version = "0.1.0"
-source = "git+https://github.com/aptos-labs/aptos-core.git#d5c6a8139d96fb16c3fc8bc8d09aaeb28498c57c"
+source = "git+https://github.com/0o-de-lally/zapatos.git?branch=vendor#d1716346b14792ae1800530840fefb4955cfddf4"
 dependencies = [
  "anyhow",
  "aptos-infallible",
@@ -912,7 +901,7 @@ dependencies = [
 [[package]]
 name = "aptos-scratchpad"
 version = "0.1.0"
-source = "git+https://github.com/aptos-labs/aptos-core.git#d5c6a8139d96fb16c3fc8bc8d09aaeb28498c57c"
+source = "git+https://github.com/0o-de-lally/zapatos.git?branch=vendor#d1716346b14792ae1800530840fefb4955cfddf4"
 dependencies = [
  "aptos-crypto",
  "aptos-infallible",
@@ -928,7 +917,7 @@ dependencies = [
 [[package]]
 name = "aptos-sdk"
 version = "0.0.3"
-source = "git+https://github.com/aptos-labs/aptos-core.git#d5c6a8139d96fb16c3fc8bc8d09aaeb28498c57c"
+source = "git+https://github.com/0o-de-lally/zapatos.git?branch=vendor#d1716346b14792ae1800530840fefb4955cfddf4"
 dependencies = [
  "anyhow",
  "aptos-cached-packages",
@@ -947,7 +936,7 @@ dependencies = [
 [[package]]
 name = "aptos-sdk-builder"
 version = "0.1.0"
-source = "git+https://github.com/aptos-labs/aptos-core.git#d5c6a8139d96fb16c3fc8bc8d09aaeb28498c57c"
+source = "git+https://github.com/0o-de-lally/zapatos.git?branch=vendor#d1716346b14792ae1800530840fefb4955cfddf4"
 dependencies = [
  "anyhow",
  "aptos-types",
@@ -957,7 +946,7 @@ dependencies = [
  "once_cell",
  "regex",
  "serde-generate",
- "serde-reflection 0.3.5",
+ "serde-reflection",
  "serde_yaml 0.8.26",
  "structopt",
  "textwrap 0.15.2",
@@ -966,7 +955,7 @@ dependencies = [
 [[package]]
 name = "aptos-secure-net"
 version = "0.1.0"
-source = "git+https://github.com/aptos-labs/aptos-core.git#d5c6a8139d96fb16c3fc8bc8d09aaeb28498c57c"
+source = "git+https://github.com/0o-de-lally/zapatos.git?branch=vendor#d1716346b14792ae1800530840fefb4955cfddf4"
 dependencies = [
  "aptos-logger",
  "aptos-metrics-core",
@@ -978,7 +967,7 @@ dependencies = [
 [[package]]
 name = "aptos-secure-storage"
 version = "0.1.0"
-source = "git+https://github.com/aptos-labs/aptos-core.git#d5c6a8139d96fb16c3fc8bc8d09aaeb28498c57c"
+source = "git+https://github.com/0o-de-lally/zapatos.git?branch=vendor#d1716346b14792ae1800530840fefb4955cfddf4"
 dependencies = [
  "anyhow",
  "aptos-crypto",
@@ -1002,7 +991,7 @@ dependencies = [
 [[package]]
 name = "aptos-short-hex-str"
 version = "0.1.0"
-source = "git+https://github.com/aptos-labs/aptos-core.git#d5c6a8139d96fb16c3fc8bc8d09aaeb28498c57c"
+source = "git+https://github.com/0o-de-lally/zapatos.git?branch=vendor#d1716346b14792ae1800530840fefb4955cfddf4"
 dependencies = [
  "mirai-annotations",
  "serde 1.0.160",
@@ -1013,7 +1002,7 @@ dependencies = [
 [[package]]
 name = "aptos-speculative-state-helper"
 version = "0.1.0"
-source = "git+https://github.com/aptos-labs/aptos-core.git#d5c6a8139d96fb16c3fc8bc8d09aaeb28498c57c"
+source = "git+https://github.com/0o-de-lally/zapatos.git?branch=vendor#d1716346b14792ae1800530840fefb4955cfddf4"
 dependencies = [
  "anyhow",
  "aptos-infallible",
@@ -1025,7 +1014,7 @@ dependencies = [
 [[package]]
 name = "aptos-state-view"
 version = "0.1.0"
-source = "git+https://github.com/aptos-labs/aptos-core.git#d5c6a8139d96fb16c3fc8bc8d09aaeb28498c57c"
+source = "git+https://github.com/0o-de-lally/zapatos.git?branch=vendor#d1716346b14792ae1800530840fefb4955cfddf4"
 dependencies = [
  "anyhow",
  "aptos-crypto",
@@ -1039,7 +1028,7 @@ dependencies = [
 [[package]]
 name = "aptos-storage-interface"
 version = "0.1.0"
-source = "git+https://github.com/aptos-labs/aptos-core.git#d5c6a8139d96fb16c3fc8bc8d09aaeb28498c57c"
+source = "git+https://github.com/0o-de-lally/zapatos.git?branch=vendor#d1716346b14792ae1800530840fefb4955cfddf4"
 dependencies = [
  "anyhow",
  "aptos-crypto",
@@ -1064,7 +1053,7 @@ dependencies = [
 [[package]]
 name = "aptos-temppath"
 version = "0.1.0"
-source = "git+https://github.com/aptos-labs/aptos-core.git#d5c6a8139d96fb16c3fc8bc8d09aaeb28498c57c"
+source = "git+https://github.com/0o-de-lally/zapatos.git?branch=vendor#d1716346b14792ae1800530840fefb4955cfddf4"
 dependencies = [
  "hex",
  "rand 0.7.3",
@@ -1073,7 +1062,7 @@ dependencies = [
 [[package]]
 name = "aptos-time-service"
 version = "0.1.0"
-source = "git+https://github.com/aptos-labs/aptos-core.git#d5c6a8139d96fb16c3fc8bc8d09aaeb28498c57c"
+source = "git+https://github.com/0o-de-lally/zapatos.git?branch=vendor#d1716346b14792ae1800530840fefb4955cfddf4"
 dependencies = [
  "aptos-infallible",
  "enum_dispatch",
@@ -1086,7 +1075,7 @@ dependencies = [
 [[package]]
 name = "aptos-types"
 version = "0.0.3"
-source = "git+https://github.com/aptos-labs/aptos-core.git#d5c6a8139d96fb16c3fc8bc8d09aaeb28498c57c"
+source = "git+https://github.com/0o-de-lally/zapatos.git?branch=vendor#d1716346b14792ae1800530840fefb4955cfddf4"
 dependencies = [
  "anyhow",
  "aptos-bitvec",
@@ -1116,7 +1105,7 @@ dependencies = [
 [[package]]
 name = "aptos-vault-client"
 version = "0.1.0"
-source = "git+https://github.com/aptos-labs/aptos-core.git#d5c6a8139d96fb16c3fc8bc8d09aaeb28498c57c"
+source = "git+https://github.com/0o-de-lally/zapatos.git?branch=vendor#d1716346b14792ae1800530840fefb4955cfddf4"
 dependencies = [
  "aptos-crypto",
  "base64 0.13.1",
@@ -1132,7 +1121,7 @@ dependencies = [
 [[package]]
 name = "aptos-vm"
 version = "0.1.0"
-source = "git+https://github.com/aptos-labs/aptos-core.git#d5c6a8139d96fb16c3fc8bc8d09aaeb28498c57c"
+source = "git+https://github.com/0o-de-lally/zapatos.git?branch=vendor#d1716346b14792ae1800530840fefb4955cfddf4"
 dependencies = [
  "anyhow",
  "aptos-aggregator",
@@ -1151,7 +1140,7 @@ dependencies = [
  "bcs 0.1.4",
  "dashmap",
  "fail 0.5.1",
- "move-binary-format 0.0.3 (git+https://github.com/aptos-labs/aptos-core.git)",
+ "move-binary-format 0.0.3 (git+https://github.com/0o-de-lally/zapatos.git?branch=vendor)",
  "move-bytecode-utils",
  "move-bytecode-verifier",
  "move-core-types 0.0.4",
@@ -1172,7 +1161,7 @@ dependencies = [
 [[package]]
 name = "aptos-vm-genesis"
 version = "0.1.0"
-source = "git+https://github.com/aptos-labs/aptos-core.git#d5c6a8139d96fb16c3fc8bc8d09aaeb28498c57c"
+source = "git+https://github.com/0o-de-lally/zapatos.git?branch=vendor#d1716346b14792ae1800530840fefb4955cfddf4"
 dependencies = [
  "anyhow",
  "aptos-cached-packages",
@@ -1193,7 +1182,7 @@ dependencies = [
 [[package]]
 name = "aptos-vm-logging"
 version = "0.1.0"
-source = "git+https://github.com/aptos-labs/aptos-core.git#d5c6a8139d96fb16c3fc8bc8d09aaeb28498c57c"
+source = "git+https://github.com/0o-de-lally/zapatos.git?branch=vendor#d1716346b14792ae1800530840fefb4955cfddf4"
 dependencies = [
  "aptos-crypto",
  "aptos-logger",
@@ -1823,9 +1812,9 @@ dependencies = [
 
 [[package]]
 name = "clap"
-version = "4.2.2"
+version = "4.2.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "9b802d85aaf3a1cdb02b224ba472ebdea62014fccfcb269b95a4d76443b5ee5a"
+checksum = "956ac1f6381d8d82ab4684768f89c0ea3afe66925ceadb4eeb3fc452ffc55d62"
 dependencies = [
  "clap_builder",
  "clap_derive 4.2.0",
@@ -1834,9 +1823,9 @@ dependencies = [
 
 [[package]]
 name = "clap_builder"
-version = "4.2.2"
+version = "4.2.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "14a1a858f532119338887a4b8e1af9c60de8249cd7bafd68036a489e261e37b6"
+checksum = "84080e799e54cff944f4b4a4b0e71630b0e0443b25b985175c7dddc1a859b749"
 dependencies = [
  "anstream",
  "anstyle",
@@ -3028,13 +3017,15 @@ dependencies = [
  "aptos-framework",
  "aptos-gas",
  "aptos-genesis",
+ "aptos-github-client",
  "aptos-sdk",
  "aptos-secure-storage",
  "aptos-types",
  "aptos-vm",
+ "aptos-vm-genesis",
  "bcs 0.1.4",
  "chrono",
- "clap 4.2.2",
+ "clap 4.2.4",
  "console 0.15.5",
  "dialoguer",
  "diem-types",
@@ -3046,8 +3037,6 @@ dependencies = [
  "serde 1.0.160",
  "serde_json",
  "ureq",
- "vendorized-aptos-github-client",
- "vendorized-vm-genesis",
 ]
 
 [[package]]
@@ -3839,9 +3828,9 @@ checksum = "0717cef1bc8b636c6e1c1bbdefc09e6322da8a9321966e8928ef80d20f7f770f"
 
 [[package]]
 name = "linux-raw-sys"
-version = "0.3.2"
+version = "0.3.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "3f508063cc7bb32987c71511216bd5a32be15bccb6a80b52df8b9d7f01fc3aa2"
+checksum = "9b085a4f2cde5781fc4b1717f2e86c62f5cda49de7ba99a7c2eae02b61c9064c"
 
 [[package]]
 name = "lock_api"
@@ -3969,13 +3958,13 @@ checksum = "1fafa6961cabd9c63bcd77a45d7e3b7f3b552b70417831fb0f56db717e72407e"
 [[package]]
 name = "move-abigen"
 version = "0.1.0"
-source = "git+https://github.com/aptos-labs/aptos-core.git#d5c6a8139d96fb16c3fc8bc8d09aaeb28498c57c"
+source = "git+https://github.com/0o-de-lally/zapatos.git?branch=vendor#d1716346b14792ae1800530840fefb4955cfddf4"
 dependencies = [
  "anyhow",
  "bcs 0.1.4",
  "heck 0.3.3",
  "log",
- "move-binary-format 0.0.3 (git+https://github.com/aptos-labs/aptos-core.git)",
+ "move-binary-format 0.0.3 (git+https://github.com/0o-de-lally/zapatos.git?branch=vendor)",
  "move-bytecode-verifier",
  "move-command-line-common",
  "move-core-types 0.0.4",
@@ -4000,15 +3989,11 @@ dependencies = [
 [[package]]
 name = "move-binary-format"
 version = "0.0.3"
-source = "git+https://github.com/aptos-labs/aptos-core.git#d5c6a8139d96fb16c3fc8bc8d09aaeb28498c57c"
+source = "git+https://github.com/0o-de-lally/zapatos.git?branch=vendor#d1716346b14792ae1800530840fefb4955cfddf4"
 dependencies = [
  "anyhow",
- "arbitrary",
- "indexmap",
  "move-core-types 0.0.4",
  "once_cell",
- "proptest",
- "proptest-derive",
  "ref-cast",
  "serde 1.0.160",
  "variant_count",
@@ -4017,16 +4002,16 @@ dependencies = [
 [[package]]
 name = "move-borrow-graph"
 version = "0.0.1"
-source = "git+https://github.com/aptos-labs/aptos-core.git#d5c6a8139d96fb16c3fc8bc8d09aaeb28498c57c"
+source = "git+https://github.com/0o-de-lally/zapatos.git?branch=vendor#d1716346b14792ae1800530840fefb4955cfddf4"
 
 [[package]]
 name = "move-bytecode-source-map"
 version = "0.1.0"
-source = "git+https://github.com/aptos-labs/aptos-core.git#d5c6a8139d96fb16c3fc8bc8d09aaeb28498c57c"
+source = "git+https://github.com/0o-de-lally/zapatos.git?branch=vendor#d1716346b14792ae1800530840fefb4955cfddf4"
 dependencies = [
  "anyhow",
  "bcs 0.1.4",
- "move-binary-format 0.0.3 (git+https://github.com/aptos-labs/aptos-core.git)",
+ "move-binary-format 0.0.3 (git+https://github.com/0o-de-lally/zapatos.git?branch=vendor)",
  "move-command-line-common",
  "move-core-types 0.0.4",
  "move-ir-types",
@@ -4037,23 +4022,23 @@ dependencies = [
 [[package]]
 name = "move-bytecode-utils"
 version = "0.1.0"
-source = "git+https://github.com/aptos-labs/aptos-core.git#d5c6a8139d96fb16c3fc8bc8d09aaeb28498c57c"
+source = "git+https://github.com/0o-de-lally/zapatos.git?branch=vendor#d1716346b14792ae1800530840fefb4955cfddf4"
 dependencies = [
  "anyhow",
- "move-binary-format 0.0.3 (git+https://github.com/aptos-labs/aptos-core.git)",
+ "move-binary-format 0.0.3 (git+https://github.com/0o-de-lally/zapatos.git?branch=vendor)",
  "move-core-types 0.0.4",
  "petgraph 0.5.1",
- "serde-reflection 0.3.6",
+ "serde-reflection",
 ]
 
 [[package]]
 name = "move-bytecode-verifier"
 version = "0.1.0"
-source = "git+https://github.com/aptos-labs/aptos-core.git#d5c6a8139d96fb16c3fc8bc8d09aaeb28498c57c"
+source = "git+https://github.com/0o-de-lally/zapatos.git?branch=vendor#d1716346b14792ae1800530840fefb4955cfddf4"
 dependencies = [
  "anyhow",
  "fail 0.4.0",
- "move-binary-format 0.0.3 (git+https://github.com/aptos-labs/aptos-core.git)",
+ "move-binary-format 0.0.3 (git+https://github.com/0o-de-lally/zapatos.git?branch=vendor)",
  "move-borrow-graph",
  "move-core-types 0.0.4",
  "petgraph 0.5.1",
@@ -4062,7 +4047,7 @@ dependencies = [
 [[package]]
 name = "move-command-line-common"
 version = "0.1.0"
-source = "git+https://github.com/aptos-labs/aptos-core.git#d5c6a8139d96fb16c3fc8bc8d09aaeb28498c57c"
+source = "git+https://github.com/0o-de-lally/zapatos.git?branch=vendor#d1716346b14792ae1800530840fefb4955cfddf4"
 dependencies = [
  "anyhow",
  "difference",
@@ -4079,7 +4064,7 @@ dependencies = [
 [[package]]
 name = "move-compiler"
 version = "0.0.1"
-source = "git+https://github.com/aptos-labs/aptos-core.git#d5c6a8139d96fb16c3fc8bc8d09aaeb28498c57c"
+source = "git+https://github.com/0o-de-lally/zapatos.git?branch=vendor#d1716346b14792ae1800530840fefb4955cfddf4"
 dependencies = [
  "anyhow",
  "bcs 0.1.4",
@@ -4087,7 +4072,7 @@ dependencies = [
  "codespan-reporting",
  "difference",
  "hex",
- "move-binary-format 0.0.3 (git+https://github.com/aptos-labs/aptos-core.git)",
+ "move-binary-format 0.0.3 (git+https://github.com/0o-de-lally/zapatos.git?branch=vendor)",
  "move-borrow-graph",
  "move-bytecode-source-map",
  "move-bytecode-verifier",
@@ -4124,7 +4109,7 @@ dependencies = [
 [[package]]
 name = "move-core-types"
 version = "0.0.4"
-source = "git+https://github.com/aptos-labs/aptos-core.git#d5c6a8139d96fb16c3fc8bc8d09aaeb28498c57c"
+source = "git+https://github.com/0o-de-lally/zapatos.git?branch=vendor#d1716346b14792ae1800530840fefb4955cfddf4"
 dependencies = [
  "anyhow",
  "arbitrary",
@@ -4146,14 +4131,14 @@ dependencies = [
 [[package]]
 name = "move-coverage"
 version = "0.1.0"
-source = "git+https://github.com/aptos-labs/aptos-core.git#d5c6a8139d96fb16c3fc8bc8d09aaeb28498c57c"
+source = "git+https://github.com/0o-de-lally/zapatos.git?branch=vendor#d1716346b14792ae1800530840fefb4955cfddf4"
 dependencies = [
  "anyhow",
  "bcs 0.1.4",
  "clap 3.2.23",
  "codespan",
  "colored",
- "move-binary-format 0.0.3 (git+https://github.com/aptos-labs/aptos-core.git)",
+ "move-binary-format 0.0.3 (git+https://github.com/0o-de-lally/zapatos.git?branch=vendor)",
  "move-bytecode-source-map",
  "move-command-line-common",
  "move-core-types 0.0.4",
@@ -4166,12 +4151,12 @@ dependencies = [
 [[package]]
 name = "move-disassembler"
 version = "0.1.0"
-source = "git+https://github.com/aptos-labs/aptos-core.git#d5c6a8139d96fb16c3fc8bc8d09aaeb28498c57c"
+source = "git+https://github.com/0o-de-lally/zapatos.git?branch=vendor#d1716346b14792ae1800530840fefb4955cfddf4"
 dependencies = [
  "anyhow",
  "clap 3.2.23",
  "colored",
- "move-binary-format 0.0.3 (git+https://github.com/aptos-labs/aptos-core.git)",
+ "move-binary-format 0.0.3 (git+https://github.com/0o-de-lally/zapatos.git?branch=vendor)",
  "move-bytecode-source-map",
  "move-bytecode-verifier",
  "move-command-line-common",
@@ -4184,7 +4169,7 @@ dependencies = [
 [[package]]
 name = "move-docgen"
 version = "0.1.0"
-source = "git+https://github.com/aptos-labs/aptos-core.git#d5c6a8139d96fb16c3fc8bc8d09aaeb28498c57c"
+source = "git+https://github.com/0o-de-lally/zapatos.git?branch=vendor#d1716346b14792ae1800530840fefb4955cfddf4"
 dependencies = [
  "anyhow",
  "codespan",
@@ -4202,7 +4187,7 @@ dependencies = [
 [[package]]
 name = "move-errmapgen"
 version = "0.1.0"
-source = "git+https://github.com/aptos-labs/aptos-core.git#d5c6a8139d96fb16c3fc8bc8d09aaeb28498c57c"
+source = "git+https://github.com/0o-de-lally/zapatos.git?branch=vendor#d1716346b14792ae1800530840fefb4955cfddf4"
 dependencies = [
  "anyhow",
  "bcs 0.1.4",
@@ -4216,12 +4201,12 @@ dependencies = [
 [[package]]
 name = "move-ir-to-bytecode"
 version = "0.1.0"
-source = "git+https://github.com/aptos-labs/aptos-core.git#d5c6a8139d96fb16c3fc8bc8d09aaeb28498c57c"
+source = "git+https://github.com/0o-de-lally/zapatos.git?branch=vendor#d1716346b14792ae1800530840fefb4955cfddf4"
 dependencies = [
  "anyhow",
  "codespan-reporting",
  "log",
- "move-binary-format 0.0.3 (git+https://github.com/aptos-labs/aptos-core.git)",
+ "move-binary-format 0.0.3 (git+https://github.com/0o-de-lally/zapatos.git?branch=vendor)",
  "move-bytecode-source-map",
  "move-command-line-common",
  "move-core-types 0.0.4",
@@ -4235,7 +4220,7 @@ dependencies = [
 [[package]]
 name = "move-ir-to-bytecode-syntax"
 version = "0.1.0"
-source = "git+https://github.com/aptos-labs/aptos-core.git#d5c6a8139d96fb16c3fc8bc8d09aaeb28498c57c"
+source = "git+https://github.com/0o-de-lally/zapatos.git?branch=vendor#d1716346b14792ae1800530840fefb4955cfddf4"
 dependencies = [
  "anyhow",
  "hex",
@@ -4248,7 +4233,7 @@ dependencies = [
 [[package]]
 name = "move-ir-types"
 version = "0.1.0"
-source = "git+https://github.com/aptos-labs/aptos-core.git#d5c6a8139d96fb16c3fc8bc8d09aaeb28498c57c"
+source = "git+https://github.com/0o-de-lally/zapatos.git?branch=vendor#d1716346b14792ae1800530840fefb4955cfddf4"
 dependencies = [
  "anyhow",
  "hex",
@@ -4262,7 +4247,7 @@ dependencies = [
 [[package]]
 name = "move-model"
 version = "0.1.0"
-source = "git+https://github.com/aptos-labs/aptos-core.git#d5c6a8139d96fb16c3fc8bc8d09aaeb28498c57c"
+source = "git+https://github.com/0o-de-lally/zapatos.git?branch=vendor#d1716346b14792ae1800530840fefb4955cfddf4"
 dependencies = [
  "anyhow",
  "codespan",
@@ -4270,7 +4255,7 @@ dependencies = [
  "internment",
  "itertools",
  "log",
- "move-binary-format 0.0.3 (git+https://github.com/aptos-labs/aptos-core.git)",
+ "move-binary-format 0.0.3 (git+https://github.com/0o-de-lally/zapatos.git?branch=vendor)",
  "move-bytecode-source-map",
  "move-bytecode-verifier",
  "move-command-line-common",
@@ -4288,7 +4273,7 @@ dependencies = [
 [[package]]
 name = "move-package"
 version = "0.1.0"
-source = "git+https://github.com/aptos-labs/aptos-core.git#d5c6a8139d96fb16c3fc8bc8d09aaeb28498c57c"
+source = "git+https://github.com/0o-de-lally/zapatos.git?branch=vendor#d1716346b14792ae1800530840fefb4955cfddf4"
 dependencies = [
  "anyhow",
  "bcs 0.1.4",
@@ -4297,7 +4282,7 @@ dependencies = [
  "dirs-next 2.0.0",
  "itertools",
  "move-abigen",
- "move-binary-format 0.0.3 (git+https://github.com/aptos-labs/aptos-core.git)",
+ "move-binary-format 0.0.3 (git+https://github.com/0o-de-lally/zapatos.git?branch=vendor)",
  "move-bytecode-source-map",
  "move-bytecode-utils",
  "move-command-line-common",
@@ -4324,7 +4309,7 @@ dependencies = [
 [[package]]
 name = "move-prover"
 version = "0.1.0"
-source = "git+https://github.com/aptos-labs/aptos-core.git#d5c6a8139d96fb16c3fc8bc8d09aaeb28498c57c"
+source = "git+https://github.com/0o-de-lally/zapatos.git?branch=vendor#d1716346b14792ae1800530840fefb4955cfddf4"
 dependencies = [
  "anyhow",
  "async-trait",
@@ -4337,7 +4322,7 @@ dependencies = [
  "itertools",
  "log",
  "move-abigen",
- "move-binary-format 0.0.3 (git+https://github.com/aptos-labs/aptos-core.git)",
+ "move-binary-format 0.0.3 (git+https://github.com/0o-de-lally/zapatos.git?branch=vendor)",
  "move-command-line-common",
  "move-compiler",
  "move-core-types 0.0.4",
@@ -4361,7 +4346,7 @@ dependencies = [
 [[package]]
 name = "move-prover-boogie-backend"
 version = "0.1.0"
-source = "git+https://github.com/aptos-labs/aptos-core.git#d5c6a8139d96fb16c3fc8bc8d09aaeb28498c57c"
+source = "git+https://github.com/0o-de-lally/zapatos.git?branch=vendor#d1716346b14792ae1800530840fefb4955cfddf4"
 dependencies = [
  "anyhow",
  "async-trait",
@@ -4370,7 +4355,7 @@ dependencies = [
  "futures",
  "itertools",
  "log",
- "move-binary-format 0.0.3 (git+https://github.com/aptos-labs/aptos-core.git)",
+ "move-binary-format 0.0.3 (git+https://github.com/0o-de-lally/zapatos.git?branch=vendor)",
  "move-command-line-common",
  "move-compiler",
  "move-core-types 0.0.4",
@@ -4401,10 +4386,10 @@ dependencies = [
 [[package]]
 name = "move-read-write-set-types"
 version = "0.0.3"
-source = "git+https://github.com/aptos-labs/aptos-core.git#d5c6a8139d96fb16c3fc8bc8d09aaeb28498c57c"
+source = "git+https://github.com/0o-de-lally/zapatos.git?branch=vendor#d1716346b14792ae1800530840fefb4955cfddf4"
 dependencies = [
  "anyhow",
- "move-binary-format 0.0.3 (git+https://github.com/aptos-labs/aptos-core.git)",
+ "move-binary-format 0.0.3 (git+https://github.com/0o-de-lally/zapatos.git?branch=vendor)",
  "move-core-types 0.0.4",
  "serde 1.0.160",
 ]
@@ -4412,12 +4397,12 @@ dependencies = [
 [[package]]
 name = "move-resource-viewer"
 version = "0.1.0"
-source = "git+https://github.com/aptos-labs/aptos-core.git#d5c6a8139d96fb16c3fc8bc8d09aaeb28498c57c"
+source = "git+https://github.com/0o-de-lally/zapatos.git?branch=vendor#d1716346b14792ae1800530840fefb4955cfddf4"
 dependencies = [
  "anyhow",
  "bcs 0.1.4",
  "hex",
- "move-binary-format 0.0.3 (git+https://github.com/aptos-labs/aptos-core.git)",
+ "move-binary-format 0.0.3 (git+https://github.com/0o-de-lally/zapatos.git?branch=vendor)",
  "move-bytecode-utils",
  "move-core-types 0.0.4",
  "once_cell",
@@ -4427,7 +4412,7 @@ dependencies = [
 [[package]]
 name = "move-stackless-bytecode"
 version = "0.1.0"
-source = "git+https://github.com/aptos-labs/aptos-core.git#d5c6a8139d96fb16c3fc8bc8d09aaeb28498c57c"
+source = "git+https://github.com/0o-de-lally/zapatos.git?branch=vendor#d1716346b14792ae1800530840fefb4955cfddf4"
 dependencies = [
  "codespan",
  "codespan-reporting",
@@ -4435,7 +4420,7 @@ dependencies = [
  "im",
  "itertools",
  "log",
- "move-binary-format 0.0.3 (git+https://github.com/aptos-labs/aptos-core.git)",
+ "move-binary-format 0.0.3 (git+https://github.com/0o-de-lally/zapatos.git?branch=vendor)",
  "move-borrow-graph",
  "move-bytecode-verifier",
  "move-command-line-common",
@@ -4443,7 +4428,7 @@ dependencies = [
  "move-core-types 0.0.4",
  "move-ir-to-bytecode",
  "move-model",
- "move-read-write-set-types 0.0.3 (git+https://github.com/aptos-labs/aptos-core.git)",
+ "move-read-write-set-types 0.0.3 (git+https://github.com/0o-de-lally/zapatos.git?branch=vendor)",
  "num",
  "once_cell",
  "paste",
@@ -4454,7 +4439,7 @@ dependencies = [
 [[package]]
 name = "move-symbol-pool"
 version = "0.1.0"
-source = "git+https://github.com/aptos-labs/aptos-core.git#d5c6a8139d96fb16c3fc8bc8d09aaeb28498c57c"
+source = "git+https://github.com/0o-de-lally/zapatos.git?branch=vendor#d1716346b14792ae1800530840fefb4955cfddf4"
 dependencies = [
  "once_cell",
  "serde 1.0.160",
@@ -4463,12 +4448,12 @@ dependencies = [
 [[package]]
 name = "move-table-extension"
 version = "0.1.0"
-source = "git+https://github.com/aptos-labs/aptos-core.git#d5c6a8139d96fb16c3fc8bc8d09aaeb28498c57c"
+source = "git+https://github.com/0o-de-lally/zapatos.git?branch=vendor#d1716346b14792ae1800530840fefb4955cfddf4"
 dependencies = [
  "anyhow",
  "bcs 0.1.4",
  "better_any",
- "move-binary-format 0.0.3 (git+https://github.com/aptos-labs/aptos-core.git)",
+ "move-binary-format 0.0.3 (git+https://github.com/0o-de-lally/zapatos.git?branch=vendor)",
  "move-core-types 0.0.4",
  "move-vm-runtime",
  "move-vm-types",
@@ -4480,11 +4465,11 @@ dependencies = [
 [[package]]
 name = "move-vm-runtime"
 version = "0.1.0"
-source = "git+https://github.com/aptos-labs/aptos-core.git#d5c6a8139d96fb16c3fc8bc8d09aaeb28498c57c"
+source = "git+https://github.com/0o-de-lally/zapatos.git?branch=vendor#d1716346b14792ae1800530840fefb4955cfddf4"
 dependencies = [
  "better_any",
  "fail 0.4.0",
- "move-binary-format 0.0.3 (git+https://github.com/aptos-labs/aptos-core.git)",
+ "move-binary-format 0.0.3 (git+https://github.com/0o-de-lally/zapatos.git?branch=vendor)",
  "move-bytecode-verifier",
  "move-core-types 0.0.4",
  "move-vm-types",
@@ -4497,10 +4482,10 @@ dependencies = [
 [[package]]
 name = "move-vm-test-utils"
 version = "0.1.0"
-source = "git+https://github.com/aptos-labs/aptos-core.git#d5c6a8139d96fb16c3fc8bc8d09aaeb28498c57c"
+source = "git+https://github.com/0o-de-lally/zapatos.git?branch=vendor#d1716346b14792ae1800530840fefb4955cfddf4"
 dependencies = [
  "anyhow",
- "move-binary-format 0.0.3 (git+https://github.com/aptos-labs/aptos-core.git)",
+ "move-binary-format 0.0.3 (git+https://github.com/0o-de-lally/zapatos.git?branch=vendor)",
  "move-core-types 0.0.4",
  "move-table-extension",
  "move-vm-types",
@@ -4511,13 +4496,12 @@ dependencies = [
 [[package]]
 name = "move-vm-types"
 version = "0.1.0"
-source = "git+https://github.com/aptos-labs/aptos-core.git#d5c6a8139d96fb16c3fc8bc8d09aaeb28498c57c"
+source = "git+https://github.com/0o-de-lally/zapatos.git?branch=vendor#d1716346b14792ae1800530840fefb4955cfddf4"
 dependencies = [
  "bcs 0.1.4",
- "move-binary-format 0.0.3 (git+https://github.com/aptos-labs/aptos-core.git)",
+ "move-binary-format 0.0.3 (git+https://github.com/0o-de-lally/zapatos.git?branch=vendor)",
  "move-core-types 0.0.4",
  "once_cell",
- "proptest",
  "serde 1.0.160",
  "smallvec",
 ]
@@ -5657,13 +5641,13 @@ dependencies = [
 [[package]]
 name = "read-write-set-dynamic"
 version = "0.1.0"
-source = "git+https://github.com/aptos-labs/aptos-core.git#d5c6a8139d96fb16c3fc8bc8d09aaeb28498c57c"
+source = "git+https://github.com/0o-de-lally/zapatos.git?branch=vendor#d1716346b14792ae1800530840fefb4955cfddf4"
 dependencies = [
  "anyhow",
- "move-binary-format 0.0.3 (git+https://github.com/aptos-labs/aptos-core.git)",
+ "move-binary-format 0.0.3 (git+https://github.com/0o-de-lally/zapatos.git?branch=vendor)",
  "move-bytecode-utils",
  "move-core-types 0.0.4",
- "move-read-write-set-types 0.0.3 (git+https://github.com/aptos-labs/aptos-core.git)",
+ "move-read-write-set-types 0.0.3 (git+https://github.com/0o-de-lally/zapatos.git?branch=vendor)",
 ]
 
 [[package]]
@@ -5861,9 +5845,9 @@ dependencies = [
 
 [[package]]
 name = "rustix"
-version = "0.37.11"
+version = "0.37.12"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "85597d61f83914ddeba6a47b3b8ffe7365107221c2e557ed94426489fefb5f77"
+checksum = "722529a737f5a942fdbac3a46cee213053196737c5eaa3386d52e85b786f2659"
 dependencies = [
  "bitflags",
  "errno",
@@ -6032,7 +6016,7 @@ dependencies = [
  "include_dir 0.6.2",
  "maplit",
  "serde 1.0.160",
- "serde-reflection 0.3.5",
+ "serde-reflection",
  "serde_bytes",
  "serde_yaml 0.8.26",
  "structopt",
@@ -6065,17 +6049,6 @@ dependencies = [
 name = "serde-reflection"
 version = "0.3.5"
 source = "git+https://github.com/aptos-labs/serde-reflection?rev=839aed62a20ddccf043c08961cfe74875741ccba#839aed62a20ddccf043c08961cfe74875741ccba"
-dependencies = [
- "once_cell",
- "serde 1.0.160",
- "thiserror",
-]
-
-[[package]]
-name = "serde-reflection"
-version = "0.3.6"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "f05a5f801ac62a51a49d378fdb3884480041b99aced450b28990673e8ff99895"
 dependencies = [
  "once_cell",
  "serde 1.0.160",
@@ -7079,41 +7052,6 @@ name = "vec_map"
 version = "0.8.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "f1bddf1187be692e79c5ffeab891132dfb0f236ed36a43c7ed39f1165ee20191"
-
-[[package]]
-name = "vendorized-aptos-github-client"
-version = "0.1.0"
-dependencies = [
- "aptos-proxy",
- "base64 0.13.1",
- "serde 1.0.160",
- "serde_json",
- "thiserror",
- "ureq",
-]
-
-[[package]]
-name = "vendorized-vm-genesis"
-version = "0.1.0"
-dependencies = [
- "anyhow",
- "aptos-cached-packages",
- "aptos-crypto",
- "aptos-framework",
- "aptos-gas",
- "aptos-proptest-helpers",
- "aptos-state-view",
- "aptos-types",
- "aptos-vm",
- "bcs 0.1.4",
- "move-core-types 0.0.4",
- "move-vm-types",
- "once_cell",
- "proptest",
- "proptest-derive",
- "rand 0.7.3",
- "serde 1.0.160",
-]
 
 [[package]]
 name = "version_check"

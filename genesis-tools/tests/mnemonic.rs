@@ -1,5 +1,5 @@
 
-use aptos_sdk::types::LocalAccount;
+use libra_sdk::types::LocalAccount;
 #[test]
 fn test_recover_account_from_derive_path() {
     // Same constants in test cases of TypeScript

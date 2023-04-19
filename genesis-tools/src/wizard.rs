@@ -1,17 +1,18 @@
 //!  A simple workflow tool to organize all genesis
 //! instead of using many CLI tools.
-//! 
+//! genesis wizard
+
+///////
 // TODO: import from libra
 use crate::hack_cli_progress::OLProgress;
-
-// TODO: include this public apis in upstream vendorized
-use vendorized_aptos_github_client::Client;
-
+//////
 use crate::github_extensions::LibraGithubClient;
+
+use libra_github_client::Client;
 
 use anyhow::bail;
 use dialoguer::{Confirm, Input};
-// use aptos_genesis::{
+// use libra_genesis::{
 //     // key::{Key, OperatorKey, OwnerKey, reset_safety_data},
 //     // storage_helper::StorageHelper,
 //     // validator_config::ValidatorConfig,

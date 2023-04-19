@@ -5,8 +5,8 @@ use std::io::Write;
 use anyhow::Error;
 use std::path::PathBuf;
 use ol_types::legacy_recovery::{LegacyRecovery};
-use aptos_types::transaction::{WriteSetPayload, Transaction};
-use vendorized_vm_genesis::{Validator};
+use libra_types::transaction::{WriteSetPayload, Transaction};
+use libra_vm_genesis::{Validator};
 use crate::vm::libra_mainnet_genesis;
 /// Make a recovery genesis blob
 pub fn make_recovery_genesis_from_vec_legacy_recovery(

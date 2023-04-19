@@ -1,4 +1,4 @@
-use aptos_types::{state_store::state_key::StateKey, on_chain_config::ValidatorSet, write_set::WriteSet, on_chain_config::OnChainConfig, write_set::TransactionWrite};
+use libra_types::{state_store::state_key::StateKey, on_chain_config::ValidatorSet, write_set::WriteSet, on_chain_config::OnChainConfig, write_set::TransactionWrite};
 use genesis_tools::vm::libra_mainnet_genesis;
 use libra_vm_genesis::TestValidator;
 use std::path::PathBuf;

@@ -20,15 +20,17 @@ anyhow = { workspace = true }
 ol-types = { git = "https://github.com/simsekgokhan/libra.git", branch = "v6-dwh-err"}
 diem-types = { git = "https://github.com/simsekgokhan/libra.git", branch = "v6-dwh-err"}
 move-core-types = { workspace = true }
-aptos-types = { workspace = true }
+libra-types = { workspace = true }
 bcs = { workspace = true }
-aptos-gas = { workspace = true }
-aptos-vm = { workspace = true }
-aptos-framework = { workspace = true }
-aptos-crypto = { workspace = true }
-aptos-cached-packages = { workspace = true }
-aptos-secure-storage = { workspace = true }
-aptos-genesis = { workspace = true }
+libra-gas = { workspace = true }
+libra-vm = { workspace = true }
+libra-framework = { workspace = true }
+libra-crypto = { workspace = true }
+libra-cached-packages = { workspace = true }
+libra-secure-storage = { workspace = true }
+libra-genesis = { workspace = true }
+libra-github-client = { workspace = true }
+libra-vm-genesis = { workspace = true }
 hex = { workspace = true }
 chrono = { workspace = true }
 dirs = { workspace = true }
@@ -36,9 +38,6 @@ ureq = { workspace = true }
 serde = { workspace = true }
 serde_json = { workspace = true }
 
-## TODO remove vendorized for upstream monorepo vendorized.
-vendorized-aptos-github-client = { workspace = true }
-vendorized-vm-genesis = { workspace = true }
 
 
 # for the hack_ files
@@ -48,5 +47,5 @@ indicatif = "0.17.3"
 
 
 [dev-dependencies]
-aptos-sdk = { workspace = true }
+libra-sdk = { workspace = true }
 

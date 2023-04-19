@@ -1,5 +1,5 @@
 
-use vendorized_vm_genesis::{
+use libra_vm_genesis::{
   Validator,
   verify_genesis_write_set,
   publish_framework,
@@ -20,23 +20,23 @@ use vendorized_vm_genesis::{
   GENESIS_KEYPAIR, AccountBalance, EmployeePool, ValidatorWithCommissionRate, create_accounts, create_employee_validators, create_and_initialize_validators_with_commission,
 
 };
-use aptos_crypto::{
+use libra_crypto::{
     ed25519::{Ed25519PublicKey},
     HashValue,
 };
-use aptos_framework::{self, ReleaseBundle};
-use aptos_gas::{
+use libra_framework::{self, ReleaseBundle};
+use libra_gas::{
     AbstractValueSizeGasParameters, ChangeSetConfigs,
     NativeGasParameters, LATEST_GAS_FEATURE_VERSION,
 };
-use aptos_types::{
+use libra_types::{
     chain_id::ChainId,
     on_chain_config::{
-        Features, GasScheduleV2, OnChainConsensusConfig, TimedFeatures,
+        Features, GasScheduleV2, OnChainConsensusConfig, TimedFeatures, OnChainExecutionConfig,
     },
     transaction::{ChangeSet, Transaction, WriteSetPayload},
 };
-use aptos_vm::{
+use libra_vm::{
     data_cache::AsMoveResolver,
     move_vm_ext::{MoveVmExt, SessionId},
 };
@@ -52,10 +52,11 @@ pub fn libra_mainnet_genesis(
         &GENESIS_KEYPAIR.1,
         validators,
         recovery,
-        aptos_framework::testnet_release_bundle(),
+        libra_framework::testnet_release_bundle(),
         ChainId::test(),
         &mainnet_genesis_config(),
         &OnChainConsensusConfig::default(),
+        &OnChainExecutionConfig::default(),
         &default_gas_schedule(),
     );
 
@@ -71,6 +72,7 @@ pub fn encode_libra_recovery_genesis_change_set(
     chain_id: ChainId,
     genesis_config: &GenesisConfiguration,
     consensus_config: &OnChainConsensusConfig,
+    execution_config: &OnChainExecutionConfig,
     gas_schedule: &GasScheduleV2,
 ) -> ChangeSet {
     if let Some(r) = recovery {
@@ -109,6 +111,7 @@ pub fn encode_libra_recovery_genesis_change_set(
         chain_id,
         genesis_config,
         consensus_config,
+        execution_config,
         gas_schedule,
     );
     initialize_features(&mut session);
@@ -205,12 +208,15 @@ pub fn encode_aptos_mainnet_genesis_transaction(
 
     // On-chain genesis process.
     let consensus_config = OnChainConsensusConfig::default();
+    let execution_config = &OnChainExecutionConfig::default();
     let gas_schedule = default_gas_schedule();
+
     initialize(
         &mut session,
         chain_id,
         genesis_config,
         &consensus_config,
+        &execution_config,
         &gas_schedule,
     );
     initialize_features(&mut session);
@@ -268,14 +274,14 @@ pub fn encode_aptos_mainnet_genesis_transaction(
 
 #[test]
 pub fn test_mainnet_end_to_end() {
-    use aptos_types::{
+    use libra_types::{
         account_address::{self, AccountAddress},
         on_chain_config::{OnChainConfig, ValidatorSet},
         state_store::state_key::StateKey,
         write_set::{TransactionWrite, WriteSet},
     };
-    use vendorized_vm_genesis::TestValidator;
-    use aptos_cached_packages;
+    use libra_vm_genesis::TestValidator;
+    use libra_cached_packages;
     const APTOS_COINS_BASE_WITH_DECIMALS: u64 = u64::pow(10, 8);
 
     let balance = 10_000_000 * APTOS_COINS_BASE_WITH_DECIMALS;
@@ -459,7 +465,7 @@ pub fn test_mainnet_end_to_end() {
         &accounts,
         &employees,
         &validators,
-        aptos_cached_packages::head_release_bundle(),
+        libra_cached_packages::head_release_bundle(),
         ChainId::mainnet(),
         &mainnet_genesis_config(),
     );
