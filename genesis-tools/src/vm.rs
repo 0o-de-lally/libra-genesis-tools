@@ -274,7 +274,7 @@ pub fn test_mainnet_end_to_end() {
         state_store::state_key::StateKey,
         write_set::{TransactionWrite, WriteSet},
     };
-    use libra_vm_genesis::TestValidator;
+    use vendorized_vm_genesis::TestValidator;
     use aptos_cached_packages;
     const APTOS_COINS_BASE_WITH_DECIMALS: u64 = u64::pow(10, 8);
 

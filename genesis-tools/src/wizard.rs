@@ -3,14 +3,14 @@
 //! 
 // TODO: import from libra
 use crate::hack_cli_progress::OLProgress;
+
+// TODO: include this public apis in upstream vendorized
 use vendorized_aptos_github_client::Client;
 
+use crate::github_extensions::LibraGithubClient;
 
 use anyhow::bail;
 use dialoguer::{Confirm, Input};
-
-
-use crate::github_extensions::LibraGithubClient;
 // use aptos_genesis::{
 //     // key::{Key, OperatorKey, OwnerKey, reset_safety_data},
 //     // storage_helper::StorageHelper,
@@ -20,28 +20,16 @@ use crate::github_extensions::LibraGithubClient;
 //     // ol_node_files
 // };
 
-// use vendorized_github_client;
-
-
-
-
 use dirs;
 use indicatif::{ProgressBar, ProgressIterator};
 use ol_types::config::AppCfg;
-// use ol::mgmt::restore::Backup;
-
 use std::{fs, path::PathBuf};
 use std::{path::Path, thread, time::Duration};
-// use diem_global_constants::{
-//  OPERATOR_KEY, OWNER_KEY,
-// };
 
-
-// use ol::commands::init_cmd;
-// use crate::run;
 
 #[test]
 #[ignore]
+
 fn test_wizard() {
     let mut wizard = GenesisWizard::default();
     wizard.start_wizard().unwrap();
