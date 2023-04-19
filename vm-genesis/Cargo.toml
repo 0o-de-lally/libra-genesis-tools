@@ -1,6 +1,6 @@
 [package]
-name = "libra-vm-genesis"
-description = "libra blockchain genesis"
+name = "vendorized-vm-genesis"
+description = "vm-genesis with public apis"
 version = "0.1.0"
 
 # Workspace inherited keys

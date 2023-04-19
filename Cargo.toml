@@ -3,7 +3,8 @@ resolver = "2"
 
 members = [
   "vm-genesis",
-  "genesis-tools"
+  "genesis-tools",
+  "github"
 ]
 
 #     "api",
@@ -290,8 +291,8 @@ aptos-framework = { git = "https://github.com/aptos-labs/aptos-core.git" }
 aptos-gas = {git = "https://github.com/aptos-labs/aptos-core.git" }
 # aptos-gas-algebra-ext = { git = "https://github.com/aptos-labs/aptos-core/aptos-move/gas-algebra-ext" }
 # aptos-gas-profiling = { git = "https://github.com/aptos-labs/aptos-core/aptos-move/aptos-gas-profiling" }
-# aptos-genesis = { git = "https://github.com/aptos-labs/aptos-core/crates/aptos-genesis" }
-# aptos-github-client = { git = "https://github.com/aptos-labs/aptos-core/secure/storage/github" }
+aptos-genesis = { git = "https://github.com/aptos-labs/aptos-core.git" }
+# aptos-github-client = { git = "https://github.com/aptos-labs/aptos-core.git" }
 # aptos-global-constants = { git = "https://github.com/aptos-labs/aptos-core/config/global-constants" }
 # aptos-id-generator = { git = "https://github.com/aptos-labs/aptos-core/crates/aptos-id-generator" }
 # aptos-indexer = { git = "https://github.com/aptos-labs/aptos-core/crates/indexer" }
@@ -332,7 +333,7 @@ aptos-gas = {git = "https://github.com/aptos-labs/aptos-core.git" }
 # aptos-peer-monitoring-service-types = { git = "https://github.com/aptos-labs/aptos-core/network/peer-monitoring-service/types" }
 aptos-proptest-helpers = { git = "https://github.com/aptos-labs/aptos-core.git" }
 # aptos-protos = { git = "https://github.com/aptos-labs/aptos-core/crates/aptos-protos" }
-# aptos-proxy = { git = "https://github.com/aptos-labs/aptos-core/crates/proxy" }
+aptos-proxy = { git = "https://github.com/aptos-labs/aptos-core.git" }
 # aptos-push-metrics = { git = "https://github.com/aptos-labs/aptos-core/crates/aptos-push-metrics" }
 # aptos-rate-limiter = { git = "https://github.com/aptos-labs/aptos-core/crates/aptos-rate-limiter" }
 # aptos-release-builder = { git = "https://github.com/aptos-labs/aptos-core/aptos-move/aptos-release-builder" }
@@ -348,7 +349,7 @@ aptos-proptest-helpers = { git = "https://github.com/aptos-labs/aptos-core.git" 
 # aptos-sdk = { git = "https://github.com/aptos-labs/aptos-core/sdk" }
 # aptos-sdk-builder = { git = "https://github.com/aptos-labs/aptos-core/aptos-move/aptos-sdk-builder" }
 # aptos-secure-net = { git = "https://github.com/aptos-labs/aptos-core/secure/net" }
-# aptos-secure-storage = { git = "https://github.com/aptos-labs/aptos-core/secure/storage" }
+aptos-secure-storage = { git = "https://github.com/aptos-labs/aptos-core.git" }
 # aptos-short-hex-str = { git = "https://github.com/aptos-labs/aptos-core/crates/short-hex-str" }
 # aptos-speculative-state-helper = { git = "https://github.com/aptos-labs/aptos-core/crates/aptos-speculative-state-helper" }
 # aptos-state-sync-driver = { git = "https://github.com/aptos-labs/aptos-core/state-sync/state-sync-v2/state-sync-driver" }
@@ -625,7 +626,8 @@ move-vm-types = { git = "https://github.com/aptos-labs/aptos-core.git" }
 # read-write-set-dynamic = { git = "https://github.com/aptos-labs/aptos-core/third_party/move/tools/read-write-set/dynamic" }
 
 ######## libra ########
-libra-vm-genesis = { path = "vm-genesis" }
+vendorized-vm-genesis = { path = "vm-genesis" }
+vendorized-aptos-github-client = { path = "github" }
 
 [profile.release]
 debug = true

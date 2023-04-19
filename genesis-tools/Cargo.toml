@@ -21,11 +21,29 @@ ol-types = { git = "https://github.com/simsekgokhan/libra.git", branch = "v6-dwh
 diem-types = { git = "https://github.com/simsekgokhan/libra.git", branch = "v6-dwh-err"}
 move-core-types = { workspace = true }
 aptos-types = { workspace = true }
-libra-vm-genesis = { workspace = true }
 bcs = { workspace = true }
 aptos-gas = { workspace = true }
 aptos-vm = { workspace = true }
 aptos-framework = { workspace = true }
 aptos-crypto = { workspace = true }
 aptos-cached-packages = { workspace = true }
+aptos-secure-storage = { workspace = true }
+aptos-genesis = { workspace = true }
 hex = { workspace = true }
+chrono = { workspace = true }
+dirs = { workspace = true }
+ureq = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+
+## TODO remove vendorized for upstream monorepo vendorized.
+vendorized-aptos-github-client = { workspace = true }
+vendorized-vm-genesis = { workspace = true }
+
+
+# for the hack_ files
+dialoguer = "0.8.0"
+console = "0.15.5"
+indicatif = "0.17.3"
+
+

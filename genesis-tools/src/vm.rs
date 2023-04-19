@@ -1,5 +1,5 @@
 
-use libra_vm_genesis::{
+use vendorized_vm_genesis::{
   Validator,
   verify_genesis_write_set,
   publish_framework,
@@ -78,7 +78,7 @@ pub fn encode_libra_recovery_genesis_change_set(
       .for_each(|a| {
         // dbg!(a.account);
         if let Some(acc) = a.account {
-            dbg!(convert_types::convert_account(acc));
+            dbg!(convert_types::convert_account(acc).unwrap());
         }
       })
     }
