@@ -2561,6 +2561,29 @@ dependencies = [
 [[package]]
 name = "diem-wallet"
 version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "aptos-crypto",
+ "aptos-sdk",
+ "byteorder",
+ "diem-crypto",
+ "diem-temppath",
+ "diem-types",
+ "ed25519-dalek-bip32",
+ "hex",
+ "hmac 0.10.1",
+ "mirai-annotations",
+ "pbkdf2 0.7.5",
+ "rand 0.8.5",
+ "serde 1.0.160",
+ "sha2 0.9.9",
+ "thiserror",
+ "tiny-bip39",
+]
+
+[[package]]
+name = "diem-wallet"
+version = "0.1.0"
 source = "git+https://github.com/simsekgokhan/libra.git?branch=v6-dwh-err#71d10b37d432a574cc837b19cd5000b28fd31781"
 dependencies = [
  "anyhow",
@@ -4745,7 +4768,7 @@ source = "git+https://github.com/simsekgokhan/libra.git?branch=v6-dwh-err#71d10b
 dependencies = [
  "anyhow",
  "diem-types",
- "diem-wallet",
+ "diem-wallet 0.1.0 (git+https://github.com/simsekgokhan/libra.git?branch=v6-dwh-err)",
  "once_cell",
  "rpassword",
 ]

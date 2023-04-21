@@ -1,0 +1,32 @@
+[package]
+name = "diem-wallet"
+version = "0.1.0"
+
+authors = { workspace = true }
+edition = { workspace = true }
+homepage = { workspace = true }
+license = { workspace = true }
+publish = { workspace = true }
+repository = { workspace = true }
+rust-version = { workspace = true }
+
+[dependencies]
+anyhow = "1.0.52"
+rand = "0.8.3"
+hex = "0.4.3"
+hmac = "0.10.1"
+byteorder = "1.4.3"
+pbkdf2 = "0.7.3"
+serde = "1.0.124"
+sha2 = "0.9.3"
+thiserror = "1.0.24"
+diem-crypto = { git = "https://github.com/simsekgokhan/libra.git", branch = "v6-dwh-err"}
+diem-temppath = { git = "https://github.com/simsekgokhan/libra.git", branch = "v6-dwh-err"}
+diem-types = { git = "https://github.com/simsekgokhan/libra.git", branch = "v6-dwh-err"}
+# diem-workspace-hack = { version = "0.1", path = "../diem-workspace-hack" }
+mirai-annotations = "1.10.1"
+
+libra-sdk = { workspace = true }
+tiny-bip39 = { workspace = true }
+ed25519-dalek-bip32 = { workspace = true }
+libra-crypto = { workspace = true }

@@ -28,13 +28,7 @@ use std::{fs, path::PathBuf};
 use std::{path::Path, thread, time::Duration};
 
 
-#[test]
-#[ignore]
 
-fn test_wizard() {
-    let mut wizard = GenesisWizard::default();
-    wizard.start_wizard().unwrap();
-}
 /// Wizard for genesis
 pub struct GenesisWizard {
     ///
@@ -532,3 +526,16 @@ fn initialize_host() -> anyhow::Result<AppCfg> {
     // w.run()
 }
 
+
+#[test]
+#[ignore]
+
+fn test_wizard() {
+    let mut wizard = GenesisWizard::default();
+    wizard.start_wizard().unwrap();
+}
+
+#[test] 
+fn test_init() {
+  initialize_host().unwrap();
+}

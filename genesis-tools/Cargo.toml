@@ -31,6 +31,7 @@ libra-secure-storage = { workspace = true }
 libra-genesis = { workspace = true }
 libra-github-client = { workspace = true }
 libra-vm-genesis = { workspace = true }
+# libra-sdk = { workspace = true }
 hex = { workspace = true }
 chrono = { workspace = true }
 dirs = { workspace = true }
