@@ -29,3 +29,4 @@ pub use crate::{key_factory::ChildNumber, mnemonic::Mnemonic, wallet_library::Wa
 pub mod scheme;
 
 mod new_keys;
+mod validator_keygen;

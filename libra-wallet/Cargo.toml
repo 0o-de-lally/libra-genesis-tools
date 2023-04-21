@@ -30,3 +30,5 @@ libra-sdk = { workspace = true }
 tiny-bip39 = { workspace = true }
 ed25519-dalek-bip32 = { workspace = true }
 libra-crypto = { workspace = true }
+aptos-keygen = { workspace = true }
+aptos-cli = { workspace = true }
