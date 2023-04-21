@@ -28,7 +28,7 @@ libra-framework = { workspace = true }
 libra-crypto = { workspace = true }
 libra-cached-packages = { workspace = true }
 libra-secure-storage = { workspace = true }
-libra-genesis = { workspace = true }
+# libra-genesis = { workspace = true }
 libra-github-client = { workspace = true }
 libra-vm-genesis = { workspace = true }
 # libra-sdk = { workspace = true }
