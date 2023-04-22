@@ -16,22 +16,17 @@ rust-version = { workspace = true }
 [dependencies]
 clap = { version = "4.2.2", features = ["derive", "env", "suggestions"] }
 anyhow = { workspace = true }
-# ol-genesis-tools = { git = "https://github.com/simsekgokhan/libra.git", branch = "v6-dwh-err"}
 ol-types = { git = "https://github.com/simsekgokhan/libra.git", branch = "v6-dwh-err"}
 diem-types = { git = "https://github.com/simsekgokhan/libra.git", branch = "v6-dwh-err"}
-move-core-types = { workspace = true }
-libra-types = { workspace = true }
+zapatos-types = { workspace = true }
 bcs = { workspace = true }
-libra-gas = { workspace = true }
-libra-vm = { workspace = true }
-libra-framework = { workspace = true }
-libra-crypto = { workspace = true }
-libra-cached-packages = { workspace = true }
-libra-secure-storage = { workspace = true }
-# libra-genesis = { workspace = true }
-libra-github-client = { workspace = true }
-libra-vm-genesis = { workspace = true }
-# libra-sdk = { workspace = true }
+zapatos-gas = { workspace = true }
+zapatos-vm = { workspace = true }
+zapatos-framework = { workspace = true }
+zapatos-crypto = { workspace = true }
+zapatos-cached-packages = { workspace = true }
+zapatos-github-client = { workspace = true }
+zapatos-vm-genesis = { workspace = true }
 hex = { workspace = true }
 chrono = { workspace = true }
 dirs = { workspace = true }
@@ -39,14 +34,11 @@ ureq = { workspace = true }
 serde = { workspace = true }
 serde_json = { workspace = true }
 
-
-
 # for the hack_ files
 dialoguer = "0.8.0"
 console = "0.15.5"
 indicatif = "0.17.3"
 
-
 [dev-dependencies]
-libra-sdk = { workspace = true }
+zapatos-sdk = { workspace = true }
 

@@ -4,7 +4,7 @@ use diem_types::{
   account_address::AccountAddress as LegacyAddress,
   transaction::authenticator::AuthenticationKey as LegacyAuthKey,
 };
-use libra_types::{
+use zapatos_types::{
   account_address::AccountAddress,
   transaction::authenticator::AuthenticationKey,
 };

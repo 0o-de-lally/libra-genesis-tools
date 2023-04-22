@@ -5,9 +5,9 @@ use std::io::Write;
 use anyhow::Error;
 use std::path::PathBuf;
 use ol_types::legacy_recovery::{LegacyRecovery};
-use libra_types::transaction::{WriteSetPayload, Transaction};
-use libra_vm_genesis::{Validator};
-use crate::vm::libra_mainnet_genesis;
+use zapatos_types::transaction::{WriteSetPayload, Transaction};
+use zapatos_vm_genesis::{Validator};
+use crate::vm::zapatos_mainnet_genesis;
 /// Make a recovery genesis blob
 pub fn make_recovery_genesis_from_vec_legacy_recovery(
     recovery: &[LegacyRecovery],
@@ -36,7 +36,7 @@ pub fn make_recovery_genesis_from_vec_legacy_recovery(
     //   anyhow::bail!("no val configs found for genesis set");
     // }
 
-    let recovery_changeset = libra_mainnet_genesis(
+    let recovery_changeset = zapatos_mainnet_genesis(
       genesis_vals,
       Some(recovery),
     )?;

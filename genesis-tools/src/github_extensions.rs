@@ -1,5 +1,5 @@
 
-use libra_github_client::{Client, Error};
+use zapatos_github_client::{Client, Error};
 use serde_json::json;
 use serde::{Deserialize};
 

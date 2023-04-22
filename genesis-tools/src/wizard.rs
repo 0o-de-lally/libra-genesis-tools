@@ -8,11 +8,11 @@ use crate::hack_cli_progress::OLProgress;
 //////
 use crate::github_extensions::LibraGithubClient;
 
-use libra_github_client::Client;
+use zapatos_github_client::Client;
 
 use anyhow::bail;
 use dialoguer::{Confirm, Input};
-// use libra_genesis::{
+// use zapatos_genesis::{
 //     // key::{Key, OperatorKey, OwnerKey, reset_safety_data},
 //     // storage_helper::StorageHelper,
 //     // validator_config::ValidatorConfig,

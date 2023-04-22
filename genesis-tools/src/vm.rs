@@ -1,5 +1,5 @@
 
-use libra_vm_genesis::{
+use zapatos_vm_genesis::{
   Validator,
   verify_genesis_write_set,
   publish_framework,
@@ -20,23 +20,23 @@ use libra_vm_genesis::{
   GENESIS_KEYPAIR, AccountBalance, EmployeePool, ValidatorWithCommissionRate, create_accounts, create_employee_validators, create_and_initialize_validators_with_commission,
 
 };
-use libra_crypto::{
+use zapatos_crypto::{
     ed25519::{Ed25519PublicKey},
     HashValue,
 };
-use libra_framework::{self, ReleaseBundle};
-use libra_gas::{
+use zapatos_framework::{self, ReleaseBundle};
+use zapatos_gas::{
     AbstractValueSizeGasParameters, ChangeSetConfigs,
     NativeGasParameters, LATEST_GAS_FEATURE_VERSION,
 };
-use libra_types::{
+use zapatos_types::{
     chain_id::ChainId,
     on_chain_config::{
         Features, GasScheduleV2, OnChainConsensusConfig, TimedFeatures,
     },
     transaction::{ChangeSet, Transaction, WriteSetPayload},
 };
-use libra_vm::{
+use zapatos_vm::{
     data_cache::AsMoveResolver,
     move_vm_ext::{MoveVmExt, SessionId},
 };
@@ -44,15 +44,15 @@ use ol_types::legacy_recovery::LegacyRecovery;
 
 use crate::convert_types;
 
-pub fn libra_mainnet_genesis(
+pub fn zapatos_mainnet_genesis(
     validators: &[Validator],
     recovery: Option<&[LegacyRecovery]>,
 ) -> anyhow::Result<ChangeSet> {
-    let genesis = encode_libra_recovery_genesis_change_set(
+    let genesis = encode_zapatos_recovery_genesis_change_set(
         &GENESIS_KEYPAIR.1,
         validators,
         recovery,
-        libra_framework::testnet_release_bundle(),
+        zapatos_framework::testnet_release_bundle(),
         ChainId::test(),
         &mainnet_genesis_config(),
         &OnChainConsensusConfig::default(),
@@ -63,7 +63,7 @@ pub fn libra_mainnet_genesis(
 }
 
 /// Generates a genesis using the recovery file for hard forks.
-pub fn encode_libra_recovery_genesis_change_set(
+pub fn encode_zapatos_recovery_genesis_change_set(
     core_resources_key: &Ed25519PublicKey,
     validators: &[Validator],
     recovery: Option<&[LegacyRecovery]>,
@@ -269,14 +269,14 @@ pub fn encode_aptos_mainnet_genesis_transaction(
 
 #[test]
 pub fn test_mainnet_end_to_end() {
-    use libra_types::{
+    use zapatos_types::{
         account_address::{self, AccountAddress},
         on_chain_config::{OnChainConfig, ValidatorSet},
         state_store::state_key::StateKey,
         write_set::{TransactionWrite, WriteSet},
     };
-    use libra_vm_genesis::TestValidator;
-    use libra_cached_packages;
+    use zapatos_vm_genesis::TestValidator;
+    use zapatos_cached_packages;
     const APTOS_COINS_BASE_WITH_DECIMALS: u64 = u64::pow(10, 8);
 
     let balance = 10_000_000 * APTOS_COINS_BASE_WITH_DECIMALS;
@@ -460,7 +460,7 @@ pub fn test_mainnet_end_to_end() {
         &accounts,
         &employees,
         &validators,
-        libra_cached_packages::head_release_bundle(),
+        zapatos_cached_packages::head_release_bundle(),
         ChainId::mainnet(),
         &mainnet_genesis_config(),
     );
