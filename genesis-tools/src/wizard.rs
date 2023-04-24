@@ -27,7 +27,7 @@ use ol_types::config::AppCfg;
 use std::{fs, path::PathBuf};
 use std::{path::Path, thread, time::Duration};
 
-
+const DEFAULT_DATA_PATH: &str = ".libra";
 
 /// Wizard for genesis
 pub struct GenesisWizard {
@@ -47,7 +47,7 @@ pub struct GenesisWizard {
 impl Default for GenesisWizard {
     /// testnet values for genesis wizard
     fn default() -> Self {
-        let data_path = dirs::home_dir().expect("no home dir found").join(".0L/");
+        let data_path = dirs::home_dir().expect("no home dir found").join(DEFAULT_DATA_PATH);
 
         Self {
             namespace: "alice".to_string(),
@@ -83,7 +83,7 @@ impl GenesisWizard {
             } else {
                 // check if the user wants to overwrite configs
                 if Confirm::new()
-                    .with_prompt("Want to freshen configs at .0L now?")
+                    .with_prompt(format!("Want to freshen configs at {:?} now?", &self.data_path))
                     .interact()?
                 {
                    initialize_host()?;
